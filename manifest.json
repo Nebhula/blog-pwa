@@ -3,8 +3,8 @@
   "short_name": "SOCNAS DIGI",
   "start_url": "/",
   "display": "standalone",
-  "background_color": "#006341",
-  "theme_color": "#006341",
+  "background_color": "#75d9c5",
+  "theme_color": "#ffb7ea",
   "description": "Carnet digital socios",
   "icons": [
     {
