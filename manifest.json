@@ -3,8 +3,8 @@
   "short_name": "SOCNAS DIGI",
   "start_url": "/",
   "display": "standalone",
-  "background_color": "#75d9c5",
-  "theme_color": "#ffb7ea",
+  "background_color": "#054886",
+  "theme_color": "#033360",
   "description": "Carnet digital socios - Gestiona tus credenciales digitales de manera segura y accesible desde cualquier dispositivo.",
   "lang": "es",
   "dir": "ltr",
@@ -24,23 +24,40 @@
   ],
   "screenshots": [
     {
-      "src": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjUsS66bCaAsgTpnzKjEVWv_Kpm4zFtSuQskrPePvLgNYi20ckxPKwCk2PEFsXkQDz2dw2a3uo6gEm-E2DYlhgQAuEU5YOzd-zZO7ELu60kHygKtF16zr2EWAmaEwz7VMxrUS-t4xq1nV5EdGdk6MbHcJafF8C6utjOWaeaVfbVlcteRW8cfoC5wIxjmNmL/s1600-rw/linkfree-health.png ",
-      "type": "image/jpeg",
-      "sizes": "1280x720",
+      "src": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhdeR_OinRt7UwL9_HuoPXsIUziaZ9sULon70ZuiMvFLK61HCxlHxh0K9snbHicU_9Ha0deFRnrCm1teBRRWah-FWTjrIoB0KoJSNIwJx-W_hYeDcZhHu084pbqR89f5zZZ-vYXito9Am5FQOsu2wZpJ1-j6C00EwVyB-tSsG2IEdtrrVTECRn1S4cYXff8/s1600/Dise%C3%B1o%20sin%20t%C3%ADtulo%20%2831%29.png ",
+      "type": "image/png",
+      "sizes": "720x1280",
       "label": "Inicio"
     },
     {
       "src": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiKMYLpDaz4CyI0jyurCK6O9RRiC-3DzkxdAdXrgGtuNGP-0yqNAjicXC_p-sVkVUrD6zyRYEddG0uOx_3LaZGfOg7UKMjFK1xvc2VPVV8Di_6MmDyWIs0eHTkikySAJc8QU9D_WJj5xXwgyQbGKzwinUqjvqVGSazz7JOjX6KhcBCsz0AIFbT5nuWL_Drz/s1600-rw/linkfree-joobstreet.png ",
-      "type": "image/jpeg",
-      "sizes": "1280x720",
+      "type": "image/png",
+      "sizes": "720x1280",
       "label": "Perfil"
     },
     {
-      "src": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEisTrsOWt9vbSw7DNHNBlzkUwkDPxtknZoqI6vFM2QnMKoOH2kKTVX7XYECyhQj_p2oiTCrloX06M4sWH1eJ4kYUEBeZLjxT_dhFLFGbT2Ipuqcs4K6VdScTxUd9m6sraGeGmO2jv_ep_chI2OuhfFMkfzk-bSqtfND1Rei9Pgu60JyV1jAwxTqNwCRIs50/s1600-rw/linkfree-video.png ",
-      "type": "image/jpeg",
-      "sizes": "1280x720",
+      "src": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjeOBCKFs3Q8wwzLc2ZgKLiJf_BXblGNBJQ9Ur7He1P-hvJt2Z_djW1TEhNW7ThMZ_1Cm2stdl6-qjGUUOSYF_ctZeB9pDsi2yBiYpGUWaPhv019_jiXConzM0epG26nZeQs-dxJxTvTc1aUe9zJAyq9Ye6Xu4x7Ndx89jIHNj7rMKWQ1ME6P461tzy9D4H/s1600/Dise%C3%B1o%20sin%20t%C3%ADtulo%20%2832%29.png ",
+      "type": "image/png",
+      "sizes": "720x1280",
       "label": "Funciones"
     }
+
+{
+      "src": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEj9Dp-aLUvg7BQNuPnOYkE_a5sePi64e4EaoUqXRCWIbv-k3vg5mp3LQ9Wm1_eYrYLF9IDFzp7oqmqfFY3RQdycsbtDf20KiFFgWzq9v7cl83mxnkXPMZ-qWI_uNbsmbJvpp2zPRjrPDyUIrP_kPlL-y8TIkCifxlvWS4OmjNNJQMH6_mOwsGhviS24KtPG/s1600/Dise%C3%B1o%20sin%20t%C3%ADtulo%20%2833%29.png ",
+      "type": "image/png",
+      "sizes": "720x1280",
+      "label": "Funciones"
+    }
+
+
+{
+      "src": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjnHasYfsTe-hdlGcbgaPUEsTWslmX8jb0pAAxpAeUkysnSvisd7SQ6wM9OBmt5cLmf0ZgkrhidzlpGjxbkgcRWbWYhk7p1yzc4vbqHR5pi2hHc1RFoS1PDpXEczsqXnERmd6yi_zEQephlBTBXjdovPRsRjsYqYqbvYEnpQwsZ3TeLs-i-5e5xWgOJKWy5/s1600/Dise%C3%B1o%20sin%20t%C3%ADtulo%20%2834%29.png ",
+      "type": "image/png",
+      "sizes": "720x1280",
+      "label": "Funciones"
+    }
+
+    
   ],
   "categories": ["utilities", "productivity"],
   "prefer_related_applications": false
