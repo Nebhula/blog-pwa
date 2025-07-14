@@ -3,7 +3,7 @@
   "short_name": "SOCNAS DIGI",
   "start_url": "/",
   "display": "standalone",
-  "background_color": "#054886",
+  "background_color": "#fff",
   "theme_color": "#033360",
   "description": "Carnet digital socios - Gestiona tus credenciales digitales de manera segura y accesible desde cualquier dispositivo.",
   "lang": "es",
