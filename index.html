@@ -1,672 +1,615 @@
-<!DOCTYPE html>
+
+                        <!DOCTYPE html>
+                        <html lang="en">
+                        <head>
+                            <meta charset="UTF-8">
+                            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+              <style>
+                body {
+                  background-color: white; /* Ensure the iframe has a white background */
+                }
+    
+                
+              </style>
+                        </head>
+                        <body>
+                            <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Perfil de Negocio con Reseñas</title>
-    <style>
-      /* Estilos para el perfil de negocio */
-      .business-profile-header, 
-      .business-profile-header * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-        font-family: 'Segoe UI', Roboto, -apple-system, sans-serif;
-      }
-      
-      .business-profile-header {
-        width: 100%;
-        max-width: 800px;
-        margin: 20px auto;
-        background: white;
-        border-radius: 16px;
-        overflow: hidden;
-        box-shadow: 0 5px 30px rgba(0,0,0,0.08);
-      }
-      
-      .profile-banner {
-        height: 180px;
-        background: linear-gradient(135deg, #6e8efb, #a777e3);
-        background-size: cover;
-        background-position: center;
-        position: relative;
-      }
-      
-      .profile-avatar {
-        width: 100px;
-        height: 100px;
-        border-radius: 50%;
-        border: 4px solid white;
-        background-color: #f5f5f5;
-        background-size: cover;
-        position: absolute;
-        bottom: -50px;
-        left: 50%;
-        transform: translateX(-50%);
-        box-shadow: 0 10px 25px rgba(0,0,0,0.1);
-      }
-      
-      .profile-info {
-        padding: 70px 25px 30px;
-        text-align: center;
-      }
-      
-      .business-title {
-        font-size: 26px;
-        font-weight: 700;
-        color: #2d3748;
-        margin-bottom: 10px;
-      }
-      
-      .business-subtitle {
-        font-size: 15px;
-        color: #718096;
-        line-height: 1.5;
-        max-width: 500px;
-        margin: 0 auto 25px;
-      }
-      
-      .social-container {
-        display: flex;
-        justify-content: center;
-        gap: 15px;
-        flex-wrap: wrap;
-      }
-      
-      .social-icon {
-        width: 44px;
-        height: 44px;
-        border-radius: 12px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-        background: #f8f9fa;
-        box-shadow: 0 4px 6px rgba(0,0,0,0.05);
-      }
-      
-      .social-icon:hover {
-        transform: translateY(-3px);
-        box-shadow: 0 8px 15px rgba(0,0,0,0.1);
-      }
-      
-      .social-icon svg {
-        width: 22px;
-        height: 22px;
-      }
-      
-      .social-icon.facebook:hover { background: #1877f2; }
-      .social-icon.instagram:hover { background: #e1306c; }
-      .social-icon.whatsapp:hover { background: #25d366; }
-      .social-icon.website:hover { background: #4f46e5; }
-      
-      /* Estilos para las reseñas de Google */
-      .gr-container * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-      }
-      
-      .gr-container {
-        --gr-primary: #4285f4;
-        --gr-success: #34a853;
-        --gr-danger: #ea4335;
-        --gr-warning: #f5b50a;
-        --gr-text: #202124;
-        --gr-text-light: #70757a;
-        --gr-border: #e0e0e0;
-        --gr-bg: #ffffff;
-        --gr-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
-        
-        width: 100%;
-        max-width: 1200px;
-        margin: 30px auto;
-        color: var(--gr-text);
-        box-shadow: var(--gr-shadow);
-        border-radius: 10px;
-        padding: 25px;
-        background: var(--gr-bg);
-      }
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Perfil de Negocio con Reseñas</title>
+  <style>
+    /* Estilos para el perfil de negocio */
+    .business-profile-header, 
+    .business-profile-header * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', Roboto, -apple-system, sans-serif;
+    }
+    .business-profile-header {
+      width: 100%;
+      max-width: 800px;
+      margin: 20px auto;
+      background: white;
+      border-radius: 16px;
+      overflow: hidden;
+      box-shadow: 0 5px 30px rgba(0,0,0,0.08);
+    }
+    .profile-banner {
+      height: 180px;
+      background: linear-gradient(135deg, #6e8efb, #a777e3);
+      background-size: cover;
+      background-position: center;
+      position: relative;
+    }
+    .profile-avatar {
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      border: 4px solid white;
+      background-color: #f5f5f5;
+      background-size: cover;
+      position: absolute;
+      bottom: -50px;
+      left: 50%;
+      transform: translateX(-50%);
+      box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+    }
+    .profile-info {
+      padding: 70px 25px 30px;
+      text-align: center;
+    }
+    .business-title {
+      font-size: 26px;
+      font-weight: 700;
+      color: #2d3748;
+      margin-bottom: 10px;
+    }
+    .business-subtitle {
+      font-size: 15px;
+      color: #718096;
+      line-height: 1.5;
+      max-width: 500px;
+      margin: 0 auto 25px;
+    }
+    .social-container {
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+      flex-wrap: wrap;
+    }
+    .social-icon {
+      width: 44px;
+      height: 44px;
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+      background: #f8f9fa;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+    }
+    .social-icon:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 8px 15px rgba(0,0,0,0.1);
+    }
+    .social-icon svg {
+      width: 22px;
+      height: 22px;
+    }
+    .social-icon.facebook:hover { background: #1877f2; }
+    .social-icon.instagram:hover { background: #e1306c; }
+    .social-icon.whatsapp:hover { background: #25d366; }
+    .social-icon.website:hover { background: #4f46e5; }
 
+    /* Estilos para las reseñas de Google */
+    .gr-container * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    }
+    .gr-container {
+      --gr-primary: #4285f4;
+      --gr-success: #34a853;
+      --gr-danger: #ea4335;
+      --gr-warning: #f5b50a;
+      --gr-text: #202124;
+      --gr-text-light: #70757a;
+      --gr-border: #e0e0e0;
+      --gr-bg: #ffffff;
+      --gr-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+      width: 100%;
+      max-width: 1200px;
+      margin: 30px auto;
+      color: var(--gr-text);
+      box-shadow: var(--gr-shadow);
+      border-radius: 10px;
+      padding: 25px;
+      background: var(--gr-bg);
+    }
+    .gr-header {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+      margin-bottom: 25px;
+      padding-bottom: 15px;
+      border-bottom: 1px solid var(--gr-border);
+      flex-wrap: wrap;
+    }
+    .gr-header img {
+      width: 32px;
+      height: 32px;
+      object-fit: contain;
+    }
+    .gr-header h2 {
+      font-size: 1.8rem;
+      margin: 0;
+      font-weight: 700;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      color: var(--gr-text);
+      flex-wrap: wrap;
+    }
+    .gr-count {
+      font-weight: 700;
+      font-size: 1.1rem;
+      color: var(--gr-primary);
+      background: #f1f8fe;
+      padding: 5px 12px;
+      border-radius: 20px;
+      border: 1px solid var(--gr-border);
+    }
+    .gr-header-buttons {
+      margin-left: auto;
+      display: flex;
+      gap: 15px;
+    }
+    .gr-header-btn {
+      padding: 8px 18px;
+      background: var(--gr-success);
+      color: white;
+      font-size: 1rem;
+      border-radius: 6px;
+      text-decoration: none;
+      font-weight: 600;
+      transition: all 0.3s ease;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      white-space: nowrap;
+    }
+    .gr-header-btn:hover {
+      background: #2d9249;
+      transform: translateY(-2px);
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+    }
+    .gr-grid {
+      display: grid;
+      gap: 20px;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    }
+    .gr-card {
+      border: 1px solid var(--gr-border);
+      border-radius: 10px;
+      padding: 18px 20px;
+      background: var(--gr-bg);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      transition: all 0.3s ease;
+      box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
+    }
+    .gr-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+      border-color: #d2e3fc;
+    }
+    .gr-card-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 12px;
+    }
+    .gr-user-info {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .gr-avatar {
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      background-color: #f1f1f1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #555;
+      font-weight: bold;
+      font-size: 16px;
+    }
+    .gr-username {
+      font-weight: 700;
+      font-size: 1.05rem;
+      color: var(--gr-text);
+    }
+    .gr-date {
+      font-size: 0.75rem;
+      color: var(--gr-text-light);
+      margin-top: 2px;
+    }
+    .gr-rating {
+      color: var(--gr-warning);
+      font-weight: 700;
+      font-size: 1rem;
+      white-space: nowrap;
+    }
+    .gr-text {
+      font-size: 0.95rem;
+      line-height: 1.5;
+      color: #444;
+      margin: 12px 0 18px;
+      flex-grow: 1;
+    }
+    .gr-btn-container {
+      text-align: right;
+    }
+    .gr-btn {
+      padding: 6px 12px;
+      font-size: 0.85rem;
+      background: var(--gr-primary);
+      color: white;
+      border-radius: 6px;
+      text-decoration: none;
+      font-weight: 600;
+      transition: all 0.3s ease;
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+    }
+    .gr-btn:hover {
+      background: #3367d6;
+      transform: translateY(-1px);
+    }
+    .gr-view-all {
+      margin-top: 30px;
+      text-align: center;
+      padding-top: 20px;
+      border-top: 1px solid var(--gr-border);
+    }
+    .gr-view-all-btn {
+      padding: 10px 24px;
+      font-size: 1rem;
+      background: var(--gr-danger);
+      color: white;
+      border-radius: 6px;
+      font-weight: 700;
+      text-decoration: none;
+      transition: all 0.3s ease;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+    }
+    .gr-view-all-btn:hover {
+      background: #d33426;
+      transform: translateY(-2px);
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+    }
+    .gr-stars {
+      color: var(--gr-warning);
+      letter-spacing: 2px;
+      font-size: 1.1em;
+    }
+    /* Animaciones */
+    @keyframes gr-fadeIn {
+      from { opacity: 0; transform: translateY(10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    .gr-card {
+      animation: gr-fadeIn 0.4s ease forwards;
+      opacity: 0;
+    }
+    .gr-card:nth-child(1) { animation-delay: 0.1s; }
+    .gr-card:nth-child(2) { animation-delay: 0.2s; }
+    .gr-card:nth-child(3) { animation-delay: 0.3s; }
+    .gr-card:nth-child(4) { animation-delay: 0.4s; }
+
+    /* Responsive para ambos componentes */
+    @media (max-width: 768px) {
+      .business-profile-header {
+        margin: 10px auto;
+        border-radius: 0;
+      }
+      .profile-banner {
+        height: 150px;
+      }
+      .profile-avatar {
+        width: 80px;
+        height: 80px;
+        bottom: -40px;
+      }
+      .profile-info {
+        padding: 60px 15px 20px;
+      }
+      .business-title {
+        font-size: 22px;
+        margin-bottom: 8px;
+      }
+      .business-subtitle {
+        font-size: 14px;
+        margin-bottom: 20px;
+        padding: 0 10px;
+      }
+      .social-icon {
+        width: 40px;
+        height: 40px;
+      }
+      .social-icon svg {
+        width: 20px;
+        height: 20px;
+      }
+      .gr-container {
+        padding: 15px;
+        border-radius: 0;
+        margin: 10px auto;
+      }
       .gr-header {
-        display: flex;
-        align-items: center;
-        gap: 15px;
-        margin-bottom: 25px;
-        padding-bottom: 15px;
-        border-bottom: 1px solid var(--gr-border);
-        flex-wrap: wrap;
-      }
-      
-      .gr-header img {
-        width: 32px;
-        height: 32px;
-        object-fit: contain;
-      }
-      
-      .gr-header h2 {
-        font-size: 1.8rem;
-        margin: 0;
-        font-weight: 700;
-        display: flex;
-        align-items: center;
-        gap: 12px;
-        color: var(--gr-text);
-        flex-wrap: wrap;
-      }
-      
-      .gr-count {
-        font-weight: 700;
-        font-size: 1.1rem;
-        color: var(--gr-primary);
-        background: #f1f8fe;
-        padding: 5px 12px;
-        border-radius: 20px;
-        border: 1px solid var(--gr-border);
-      }
-      
-      .gr-header-buttons {
-        margin-left: auto;
-        display: flex;
-        gap: 15px;
-      }
-      
-      .gr-header-btn {
-        padding: 8px 18px;
-        background: var(--gr-success);
-        color: white;
-        font-size: 1rem;
-        border-radius: 6px;
-        text-decoration: none;
-        font-weight: 600;
-        transition: all 0.3s ease;
-        display: flex;
-        align-items: center;
-        gap: 8px;
-        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-        white-space: nowrap;
-      }
-      
-      .gr-header-btn:hover {
-        background: #2d9249;
-        transform: translateY(-2px);
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
-      }
-      
-      .gr-grid {
-        display: grid;
-        gap: 20px;
-        grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-      }
-      
-      .gr-card {
-        border: 1px solid var(--gr-border);
-        border-radius: 10px;
-        padding: 18px 20px;
-        background: var(--gr-bg);
-        display: flex;
         flex-direction: column;
-        justify-content: space-between;
-        transition: all 0.3s ease;
-        box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
-      }
-      
-      .gr-card:hover {
-        transform: translateY(-5px);
-        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
-        border-color: #d2e3fc;
-      }
-      
-      .gr-card-header {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        margin-bottom: 12px;
-      }
-      
-      .gr-user-info {
-        display: flex;
-        align-items: center;
+        align-items: flex-start;
         gap: 10px;
       }
-      
-      .gr-avatar {
+      .gr-header h2 {
+        font-size: 1.5rem;
+      }
+      .gr-header-buttons {
+        margin-left: 0;
+        width: 100%;
+        justify-content: center;
+      }
+      .gr-header-btn {
+        width: 100%;
+        justify-content: center;
+        padding: 10px;
+      }
+      .gr-grid {
+        grid-template-columns: 1fr;
+      }
+      .gr-card {
+        padding: 15px;
+      }
+      .gr-view-all-btn {
+        width: 100%;
+        justify-content: center;
+      }
+    }
+    @media (max-width: 480px) {
+      .profile-banner {
+        height: 130px;
+      }
+      .profile-avatar {
+        width: 70px;
+        height: 70px;
+        bottom: -35px;
+      }
+      .business-title {
+        font-size: 20px;
+      }
+      .business-subtitle {
+        font-size: 13px;
+      }
+      .social-container {
+        gap: 10px;
+      }
+      .social-icon {
         width: 36px;
         height: 36px;
-        border-radius: 50%;
-        background-color: #f1f1f1;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        color: #555;
-        font-weight: bold;
-        font-size: 16px;
       }
-      
+      .gr-header h2 {
+        font-size: 1.3rem;
+      }
+      .gr-count {
+        font-size: 0.9rem;
+        padding: 4px 10px;
+      }
+      .gr-header-btn {
+        font-size: 0.9rem;
+      }
       .gr-username {
-        font-weight: 700;
-        font-size: 1.05rem;
-        color: var(--gr-text);
-      }
-      
-      .gr-date {
-        font-size: 0.75rem;
-        color: var(--gr-text-light);
-        margin-top: 2px;
-      }
-      
-      .gr-rating {
-        color: var(--gr-warning);
-        font-weight: 700;
-        font-size: 1rem;
-        white-space: nowrap;
-      }
-      
-      .gr-text {
         font-size: 0.95rem;
-        line-height: 1.5;
-        color: #444;
-        margin: 12px 0 18px;
-        flex-grow: 1;
       }
-      
-      .gr-btn-container {
-        text-align: right;
-      }
-      
-      .gr-btn {
-        padding: 6px 12px;
+      .gr-text {
         font-size: 0.85rem;
-        background: var(--gr-primary);
-        color: white;
-        border-radius: 6px;
-        text-decoration: none;
-        font-weight: 600;
-        transition: all 0.3s ease;
-        display: inline-flex;
-        align-items: center;
-        gap: 5px;
       }
-      
-      .gr-btn:hover {
-        background: #3367d6;
-        transform: translateY(-1px);
+      .gr-btn {
+        font-size: 0.8rem;
       }
-      
-      .gr-view-all {
-        margin-top: 30px;
-        text-align: center;
-        padding-top: 20px;
-        border-top: 1px solid var(--gr-border);
-      }
-      
       .gr-view-all-btn {
-        padding: 10px 24px;
-        font-size: 1rem;
-        background: var(--gr-danger);
-        color: white;
-        border-radius: 6px;
-        font-weight: 700;
-        text-decoration: none;
-        transition: all 0.3s ease;
-        display: inline-flex;
-        align-items: center;
-        gap: 8px;
-        box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+        font-size: 0.9rem;
+        padding: 8px 16px;
       }
-      
-      .gr-view-all-btn:hover {
-        background: #d33426;
-        transform: translateY(-2px);
-        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
-      }
-      
-      .gr-stars {
-        color: var(--gr-warning);
-        letter-spacing: 2px;
-        font-size: 1.1em;
-      }
-      
-      /* Animaciones */
-      @keyframes gr-fadeIn {
-        from { opacity: 0; transform: translateY(10px); }
-        to { opacity: 1; transform: translateY(0); }
-      }
-      
-      .gr-card {
-        animation: gr-fadeIn 0.4s ease forwards;
-        opacity: 0;
-      }
-      
-      .gr-card:nth-child(1) { animation-delay: 0.1s; }
-      .gr-card:nth-child(2) { animation-delay: 0.2s; }
-      .gr-card:nth-child(3) { animation-delay: 0.3s; }
-      .gr-card:nth-child(4) { animation-delay: 0.4s; }
-      
-      /* Responsive para ambos componentes */
-      @media (max-width: 768px) {
-        .business-profile-header {
-          margin: 10px auto;
-          border-radius: 0;
-        }
-        
-        .profile-banner {
-          height: 150px;
-        }
-        
-        .profile-avatar {
-          width: 80px;
-          height: 80px;
-          bottom: -40px;
-        }
-        
-        .profile-info {
-          padding: 60px 15px 20px;
-        }
-        
-        .business-title {
-          font-size: 22px;
-          margin-bottom: 8px;
-        }
-        
-        .business-subtitle {
-          font-size: 14px;
-          margin-bottom: 20px;
-          padding: 0 10px;
-        }
-        
-        .social-icon {
-          width: 40px;
-          height: 40px;
-        }
-        
-        .social-icon svg {
-          width: 20px;
-          height: 20px;
-        }
-        
-        .gr-container {
-          padding: 15px;
-          border-radius: 0;
-          margin: 10px auto;
-        }
-        
-        .gr-header {
-          flex-direction: column;
-          align-items: flex-start;
-          gap: 10px;
-        }
-        
-        .gr-header h2 {
-          font-size: 1.5rem;
-        }
-        
-        .gr-header-buttons {
-          margin-left: 0;
-          width: 100%;
-          justify-content: center;
-        }
-        
-        .gr-header-btn {
-          width: 100%;
-          justify-content: center;
-          padding: 10px;
-        }
-        
-        .gr-grid {
-          grid-template-columns: 1fr;
-        }
-        
-        .gr-card {
-          padding: 15px;
-        }
-        
-        .gr-view-all-btn {
-          width: 100%;
-          justify-content: center;
-        }
-      }
-      
-      @media (max-width: 480px) {
-        .profile-banner {
-          height: 130px;
-        }
-        
-        .profile-avatar {
-          width: 70px;
-          height: 70px;
-          bottom: -35px;
-        }
-        
-        .business-title {
-          font-size: 20px;
-        }
-        
-        .business-subtitle {
-          font-size: 13px;
-        }
-        
-        .social-container {
-          gap: 10px;
-        }
-        
-        .social-icon {
-          width: 36px;
-          height: 36px;
-        }
-        
-        .gr-header h2 {
-          font-size: 1.3rem;
-        }
-        
-        .gr-count {
-          font-size: 0.9rem;
-          padding: 4px 10px;
-        }
-        
-        .gr-header-btn {
-          font-size: 0.9rem;
-        }
-        
-        .gr-username {
-          font-size: 0.95rem;
-        }
-        
-        .gr-text {
-          font-size: 0.85rem;
-        }
-        
-        .gr-btn {
-          font-size: 0.8rem;
-        }
-        
-        .gr-view-all-btn {
-          font-size: 0.9rem;
-          padding: 8px 16px;
-        }
-      }
-    </style>
+    }
+  </style>
 </head>
 <body>
-    <!-- Perfil de Negocio -->
-    <div class="business-profile-header">
-      <!-- Banner -->
-      <div class="profile-banner" style="background-image: url('https://ejemplo.com/banner.jpg')">
-        <div class="profile-avatar" style="background-image: url('https://ejemplo.com/avatar.jpg')"></div>
-      </div>
-
-      <!-- Información -->
-      <div class="profile-info">
-        <h1 class="business-title">Nombre del Negocio</h1>
-        <p class="business-subtitle">Descripción profesional breve que destaque lo especial de tu negocio</p>
-        
-        <!-- Redes sociales - Iconos SVG inline -->
-        <div class="social-container">
-          <a href="#" class="social-icon facebook" title="Facebook">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#1877F2">
-              <path d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z"/>
-            </svg>
-          </a>
-          
-          <a href="#" class="social-icon instagram" title="Instagram">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#E1306C">
-              <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/>
-            </svg>
-          </a>
-          
-          <a href="#" class="social-icon whatsapp" title="WhatsApp">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#25D366">
-              <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
-            </svg>
-          </a>
-          
-          <a href="#" class="social-icon website" title="Sitio Web">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#4F46E5">
-              <path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm6.527 5.553a9.953 9.953 0 012.643 3.742 9.952 9.952 0 01-1.499 10.243 9.948 9.948 0 01-8.489 3.021 9.954 9.954 0 01-3.22-1.25A9.94 9.94 0 015.47 18.45l9.057-9.057a9.942 9.942 0 013.89-3.89l.11-.05zM12 2.4c1.093 0 2.15.17 3.154.484a9.958 9.958 0 00-8.27 8.27A9.704 9.704 0 002.4 12c0 .192.006.383.014.573A9.948 9.948 0 0112 2.4zm9.586 9.014c-.03-.15-.064-.3-.1-.447a9.956 9.956 0 00-9.653-9.653 9.956 9.956 0 0110.753 10.1z"/>
-              <path d="M12 21.6a9.6 9.6 0 01-6.789-2.813l9.043-9.043a9.954 9.954 0 012.643 3.742 9.948 9.948 0 01-1.499 10.243A9.552 9.552 0 0112 21.6z"/>
-            </svg>
-          </a>
-        </div>
-      </div>
+  <!-- Perfil de Negocio -->
+  <div class="business-profile-header">
+    <!-- Banner -->
+    <div class="profile-banner" style="background-image: url('https://ejemplo.com/banner.jpg')">
+      <div class="profile-avatar" style="background-image: url('https://ejemplo.com/avatar.jpg')"></div>
     </div>
-
-    <!-- Reseñas de Google -->
-    <div class="gr-container">
-      <div class="gr-header">
-        <img alt="Google logo" src="https://cdn-icons-png.flaticon.com/512/2504/2504739.png"/>
-        <h2>
-          Reseñas de Google
-          <span class="gr-count">4.8 <span class="gr-stars">★★★★★</span> (20)</span>
-        </h2>
-        <div class="gr-header-buttons">
-          <a class="gr-header-btn" href="https://search.google.com/local/writereview?placeid=YOUR_PLACE_ID" rel="noopener" target="_blank">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M12 19l7-7 3 3-7 7-3-3z"></path>
-              <path d="M18 13l-1.5-7.5L2 2l3.5 14.5L13 18l5-5z"></path>
-              <path d="M2 2l7.586 7.586"></path>
-              <circle cx="11" cy="11" r="2"></circle>
-            </svg>
-            Dejar reseña
-          </a>
-        </div>
-      </div>
-
-      <div class="gr-grid">
-        <!-- Review 1 -->
-        <div class="gr-card">
-          <div class="gr-card-header">
-            <div class="gr-user-info">
-              <div class="gr-avatar">J</div>
-              <div>
-                <div class="gr-username">Juan Pérez</div>
-                <div class="gr-date">Hace 2 semanas</div>
-              </div>
-            </div>
-            <div class="gr-rating"><span class="gr-stars">★★★★★</span></div>
-          </div>
-          <div class="gr-text">Excelente servicio y atención al cliente. El personal fue muy amable y resolvió todas mis dudas. El producto llegó antes de lo esperado y en perfectas condiciones. ¡Totalmente recomendado!</div>
-          <div class="gr-btn-container">
-            <a class="gr-btn" href="https://www.google.com/maps/review?id=review1" rel="noopener" target="_blank">
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
-                <polyline points="15 3 21 3 21 9"></polyline>
-                <line x1="10" y1="14" x2="21" y2="3"></line>
-              </svg>
-              Ver y responder
-            </a>
-          </div>
-        </div>
-
-        <!-- Review 2 -->
-        <div class="gr-card">
-          <div class="gr-card-header">
-            <div class="gr-user-info">
-              <div class="gr-avatar">A</div>
-              <div>
-                <div class="gr-username">Ana Gómez</div>
-                <div class="gr-date">Hace 1 mes</div>
-              </div>
-            </div>
-            <div class="gr-rating"><span class="gr-stars">★★★★☆</span></div>
-          </div>
-          <div class="gr-text">Muy buena experiencia en general. La calidad del producto es excelente, aunque el tiempo de espera fue un poco más largo de lo anunciado. El servicio postventa respondió rápidamente a mis consultas.</div>
-          <div class="gr-btn-container">
-            <a class="gr-btn" href="https://www.google.com/maps/review?id=review2" rel="noopener" target="_blank">
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
-                <polyline points="15 3 21 3 21 9"></polyline>
-                <line x1="10" y1="14" x2="21" y2="3"></line>
-              </svg>
-              Ver y responder
-            </a>
-          </div>
-        </div>
-
-        <!-- Review 3 -->
-        <div class="gr-card">
-          <div class="gr-card-header">
-            <div class="gr-user-info">
-              <div class="gr-avatar">C</div>
-              <div>
-                <div class="gr-username">Carlos Mendoza</div>
-                <div class="gr-date">Hace 3 días</div>
-              </div>
-            </div>
-            <div class="gr-rating"><span class="gr-stars">★★★★★</span></div>
-          </div>
-          <div class="gr-text">Producto de alta calidad que superó mis expectativas. La atención al cliente fue excepcional, con respuestas inmediatas a todas mis preguntas. Definitivamente volveré a comprar aquí.</div>
-          <div class="gr-btn-container">
-            <a class="gr-btn" href="https://www.google.com/maps/review?id=review3" rel="noopener" target="_blank">
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
-                <polyline points="15 3 21 3 21 9"></polyline>
-                <line x1="10" y1="14" x2="21" y2="3"></line>
-              </svg>
-              Ver y responder
-            </a>
-          </div>
-        </div>
-
-        <!-- Review 4 -->
-        <div class="gr-card">
-          <div class="gr-card-header">
-            <div class="gr-user-info">
-              <div class="gr-avatar">L</div>
-              <div>
-                <div class="gr-username">Lucía Torres</div>
-                <div class="gr-date">Hace 2 meses</div>
-              </div>
-            </div>
-            <div class="gr-rating"><span class="gr-stars">★★★☆☆</span></div>
-          </div>
-          <div class="gr-text">El producto cumple con lo prometido, pero la entrega tardó casi el doble del tiempo estimado. La comunicación podría mejorar, ya que no recibí actualizaciones sobre el estado de mi pedido.</div>
-          <div class="gr-btn-container">
-            <a class="gr-btn" href="https://www.google.com/maps/review?id=review4" rel="noopener" target="_blank">
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
-                <polyline points="15 3 21 3 21 9"></polyline>
-                <line x1="10" y1="14" x2="21" y2="3"></line>
-              </svg>
-              Ver y responder
-            </a>
-          </div>
-        </div>
-      </div>
-
-      <div class="gr-view-all">
-        <a class="gr-view-all-btn" href="https://search.google.com/local/reviews?placeid=YOUR_PLACE_ID" rel="noopener" target="_blank">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <line x1="8" y1="6" x2="21" y2="6"></line>
-            <line x1="8" y1="12" x2="21" y2="12"></line>
-            <line x1="8" y1="18" x2="21" y2="18"></line>
-            <line x1="3" y1="6" x2="3.01" y2="6"></line>
-            <line x1="3" y1="12" x2="3.01" y2="12"></line>
-            <line x1="3" y1="18" x2="3.01" y2="18"></line>
+    <!-- Información -->
+    <div class="profile-info">
+      <h1 class="business-title">Nombre del Negocio</h1>
+      <p class="business-subtitle">Descripción profesional breve que destaque lo especial de tu negocio</p>
+      <!-- Redes sociales - Iconos SVG inline -->
+      <div class="social-container">
+        <a href="#" class="social-icon facebook" title="Facebook">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#1877F2">
+            <path d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z"/>
           </svg>
-          Ver todas las reseñas
+        </a>
+        <a href="#" class="social-icon instagram" title="Instagram">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#E1306C">
+            <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/>
+          </svg>
+        </a>
+        <a href="#" class="social-icon whatsapp" title="WhatsApp">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#25D366">
+            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+          </svg>
+        </a>
+        <a href="#" class="social-icon website" title="Sitio Web">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#4F46E5">
+            <path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm6.527 5.553a9.953 9.953 0 012.643 3.742 9.952 9.952 0 01-1.499 10.243 9.948 9.948 0 01-8.489 3.021 9.954 9.954 0 01-3.22-1.25A9.94 9.94 0 015.47 18.45l9.057-9.057a9.942 9.942 0 013.89-3.89l.11-.05zM12 2.4c1.093 0 2.15.17 3.154.484a9.958 9.958 0 00-8.27 8.27A9.704 9.704 0 002.4 12c0 .192.006.383.014.573A9.948 9.948 0 0112 2.4zm9.586 9.014c-.03-.15-.064-.3-.1-.447a9.956 9.956 0 00-9.653-9.653 9.956 9.956 0 0110.753 10.1z"/>
+            <path d="M12 21.6a9.6 9.6 0 01-6.789-2.813l9.043-9.043a9.954 9.954 0 012.643 3.742 9.948 9.948 0 01-1.499 10.243A9.552 9.552 0 0112 21.6z"/>
+          </svg>
         </a>
       </div>
     </div>
+  </div>
+
+  <!-- Reseñas de Google -->
+  <div class="gr-container">
+    <div class="gr-header">
+      <img alt="Google logo" src="https://cdn-icons-png.flaticon.com/512/2504/2504739.png"/>
+      <h2>
+        Reseñas de Google
+        <span class="gr-count">4.8 <span class="gr-stars">★★★★★</span> (20)</span>
+      </h2>
+      <div class="gr-header-buttons">
+        <a class="gr-header-btn" href="https://search.google.com/local/writereview?placeid=YOUR_PLACE_ID" rel="noopener" target="_blank">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M12 19l7-7 3 3-7 7-3-3z"></path>
+            <path d="M18 13l-1.5-7.5L2 2l3.5 14.5L13 18l5-5z"></path>
+            <path d="M2 2l7.586 7.586"></path>
+            <circle cx="11" cy="11" r="2"></circle>
+          </svg>
+          Dejar reseña
+        </a>
+      </div>
+    </div>
+    <div class="gr-grid">
+      <!-- Review 1 -->
+      <div class="gr-card">
+        <div class="gr-card-header">
+          <div class="gr-user-info">
+            <div class="gr-avatar">J</div>
+            <div>
+              <div class="gr-username">Juan Pérez</div>
+              <div class="gr-date">Hace 2 semanas</div>
+            </div>
+          </div>
+          <div class="gr-rating"><span class="gr-stars">★★★★★</span></div>
+        </div>
+        <div class="gr-text">Excelente servicio y atención al cliente. El personal fue muy amable y resolvió todas mis dudas. El producto llegó antes de lo esperado y en perfectas condiciones. ¡Totalmente recomendado!</div>
+        <div class="gr-btn-container">
+          <a class="gr-btn" href="https://www.google.com/maps/review?id=review1" rel="noopener" target="_blank">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+              <polyline points="15 3 21 3 21 9"></polyline>
+              <line x1="10" y1="14" x2="21" y2="3"></line>
+            </svg>
+            Ver y responder
+          </a>
+        </div>
+      </div>
+      <!-- Review 2 -->
+      <div class="gr-card">
+        <div class="gr-card-header">
+          <div class="gr-user-info">
+            <div class="gr-avatar">A</div>
+            <div>
+              <div class="gr-username">Ana Gómez</div>
+              <div class="gr-date">Hace 1 mes</div>
+            </div>
+          </div>
+          <div class="gr-rating"><span class="gr-stars">★★★★☆</span></div>
+        </div>
+        <div class="gr-text">Muy buena experiencia en general. La calidad del producto es excelente, aunque el tiempo de espera fue un poco más largo de lo anunciado. El servicio postventa respondió rápidamente a mis consultas.</div>
+        <div class="gr-btn-container">
+          <a class="gr-btn" href="https://www.google.com/maps/review?id=review2" rel="noopener" target="_blank">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+              <polyline points="15 3 21 3 21 9"></polyline>
+              <line x1="10" y1="14" x2="21" y2="3"></line>
+            </svg>
+            Ver y responder
+          </a>
+        </div>
+      </div>
+      <!-- Review 3 -->
+      <div class="gr-card">
+        <div class="gr-card-header">
+          <div class="gr-user-info">
+            <div class="gr-avatar">C</div>
+            <div>
+              <div class="gr-username">Carlos Mendoza</div>
+              <div class="gr-date">Hace 3 días</div>
+            </div>
+          </div>
+          <div class="gr-rating"><span class="gr-stars">★★★★★</span></div>
+        </div>
+        <div class="gr-text">Producto de alta calidad que superó mis expectativas. La atención al cliente fue excepcional, con respuestas inmediatas a todas mis preguntas. Definitivamente volveré a comprar aquí.</div>
+        <div class="gr-btn-container">
+          <a class="gr-btn" href="https://www.google.com/maps/review?id=review3" rel="noopener" target="_blank">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+              <polyline points="15 3 21 3 21 9"></polyline>
+              <line x1="10" y1="14" x2="21" y2="3"></line>
+            </svg>
+            Ver y responder
+          </a>
+        </div>
+      </div>
+      <!-- Review 4 -->
+      <div class="gr-card">
+        <div class="gr-card-header">
+          <div class="gr-user-info">
+            <div class="gr-avatar">L</div>
+            <div>
+              <div class="gr-username">Lucía Torres</div>
+              <div class="gr-date">Hace 2 meses</div>
+            </div>
+          </div>
+          <div class="gr-rating"><span class="gr-stars">★★★☆☆</span></div>
+        </div>
+        <div class="gr-text">El producto cumple con lo prometido, pero la entrega tardó casi el doble del tiempo estimado. La comunicación podría mejorar, ya que no recibí actualizaciones sobre el estado de mi pedido.</div>
+        <div class="gr-btn-container">
+          <a class="gr-btn" href="https://www.google.com/maps/review?id=review4" rel="noopener" target="_blank">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+              <polyline points="15 3 21 3 21 9"></polyline>
+              <line x1="10" y1="14" x2="21" y2="3"></line>
+            </svg>
+            Ver y responder
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="gr-view-all">
+      <a class="gr-view-all-btn" href="https://search.google.com/local/reviews?placeid=YOUR_PLACE_ID" rel="noopener" target="_blank">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="8" y1="6" x2="21" y2="6"></line>
+          <line x1="8" y1="12" x2="21" y2="12"></line>
+          <line x1="8" y1="18" x2="21" y2="18"></line>
+          <line x1="3" y1="6" x2="3.01" y2="6"></line>
+          <line x1="3" y1="12" x2="3.01" y2="12"></line>
+          <line x1="3" y1="18" x2="3.01" y2="18"></line>
+        </svg>
+        Ver todas las reseñas
+      </a>
+    </div>
+  </div>
 </body>
 </html>
+
+
+    
+                        </body>
+                        </html>
+                    
