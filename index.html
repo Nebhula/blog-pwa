@@ -10,6 +10,7 @@
   }
   
   .business-profile-header {
+    width: 100%;
     max-width: 800px;
     margin: 20px auto;
     background: white;
@@ -68,6 +69,7 @@
     display: flex;
     justify-content: center;
     gap: 15px;
+    flex-wrap: wrap;
   }
   
   .social-icon {
@@ -100,24 +102,74 @@
   .social-icon.website:hover { background: #4f46e5; }
   
   /* Responsive */
-  @media (max-width: 600px) {
+  @media (max-width: 768px) {
+    .business-profile-header {
+      margin: 10px auto;
+      border-radius: 0;
+    }
+    
     .profile-banner {
       height: 150px;
     }
     
     .profile-avatar {
-      width: 90px;
-      height: 90px;
-      bottom: -45px;
+      width: 80px;
+      height: 80px;
+      bottom: -40px;
+    }
+    
+    .profile-info {
+      padding: 60px 15px 20px;
     }
     
     .business-title {
       font-size: 22px;
+      margin-bottom: 8px;
+    }
+    
+    .business-subtitle {
+      font-size: 14px;
+      margin-bottom: 20px;
+      padding: 0 10px;
     }
     
     .social-icon {
       width: 40px;
       height: 40px;
+    }
+    
+    .social-icon svg {
+      width: 20px;
+      height: 20px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .profile-banner {
+      height: 130px;
+    }
+    
+    .profile-avatar {
+      width: 70px;
+      height: 70px;
+      bottom: -35px;
+    }
+    
+    .business-title {
+      font-size: 20px;
+    }
+    
+    .business-subtitle {
+      font-size: 13px;
+    }
+    
+    .social-container {
+      gap: 10px;
+    }
+    
+    .social-icon {
+      width: 36px;
+      height: 36px;
     }
   }
 </style>
@@ -182,6 +234,7 @@
     --gr-bg: #ffffff;
     --gr-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
     
+    width: 100%;
     max-width: 1200px;
     margin: 30px auto;
     color: var(--gr-text);
@@ -198,6 +251,7 @@
     margin-bottom: 25px;
     padding-bottom: 15px;
     border-bottom: 1px solid var(--gr-border);
+    flex-wrap: wrap;
   }
   
   .gr-header img {
@@ -214,6 +268,7 @@
     align-items: center;
     gap: 12px;
     color: var(--gr-text);
+    flex-wrap: wrap;
   }
   
   .gr-count {
@@ -245,6 +300,7 @@
     align-items: center;
     gap: 8px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    white-space: nowrap;
   }
   
   .gr-header-btn:hover {
@@ -405,18 +461,77 @@
   
   /* Responsive */
   @media (max-width: 768px) {
+    .gr-container {
+      padding: 15px;
+      border-radius: 0;
+      margin: 10px auto;
+    }
+    
     .gr-header {
-      flex-wrap: wrap;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 10px;
+    }
+    
+    .gr-header h2 {
+      font-size: 1.5rem;
     }
     
     .gr-header-buttons {
       margin-left: 0;
       width: 100%;
-      justify-content: flex-end;
+      justify-content: center;
+    }
+    
+    .gr-header-btn {
+      width: 100%;
+      justify-content: center;
+      padding: 10px;
     }
     
     .gr-grid {
       grid-template-columns: 1fr;
+    }
+    
+    .gr-card {
+      padding: 15px;
+    }
+    
+    .gr-view-all-btn {
+      width: 100%;
+      justify-content: center;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .gr-header h2 {
+      font-size: 1.3rem;
+    }
+    
+    .gr-count {
+      font-size: 0.9rem;
+      padding: 4px 10px;
+    }
+    
+    .gr-header-btn {
+      font-size: 0.9rem;
+    }
+    
+    .gr-username {
+      font-size: 0.95rem;
+    }
+    
+    .gr-text {
+      font-size: 0.85rem;
+    }
+    
+    .gr-btn {
+      font-size: 0.8rem;
+    }
+    
+    .gr-view-all-btn {
+      font-size: 0.9rem;
+      padding: 8px 16px;
     }
   }
 </style>
