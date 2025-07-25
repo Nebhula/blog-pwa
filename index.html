@@ -1051,7 +1051,72 @@
 
 
 
+<style>
+.floating-review-btn {
+    /* Estilo base (igual para todos los dispositivos) */
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: white;
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.2);
+    z-index: 9999;
+    padding: 12px 20px; /* Texto siempre visible en móvil */
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    font-size: 14px;
+    color: #5f6368;
+    text-decoration: none;
+    border: 1px solid #f1f1f1;
+    animation: pulse 2s infinite;
+}
 
+.google-icon {
+    width: 28px;
+    height: 28px;
+    margin-right: 10px;
+}
+
+/* Efecto hover SOLO en escritorio */
+@media (hover: hover) and (min-width: 768px) {
+    .floating-review-btn {
+        width: 60px;
+        padding: 15px;
+        justify-content: center;
+    }
+    .btn-text {
+        display: none;
+    }
+    .floating-review-btn:hover {
+        width: auto;
+        padding: 15px 25px;
+    }
+    .floating-review-btn:hover .btn-text {
+        display: inline;
+        margin-left: 12px;
+    }
+}
+
+/* Mobile: Texto siempre visible */
+@media (max-width: 767px) {
+    .floating-review-btn {
+        font-size: 12px;
+        padding: 10px 15px;
+    }
+    .google-icon {
+        width: 24px;
+        height: 24px;
+    }
+}
+
+@keyframes pulse {
+    0% { box-shadow: 0 0 0 0 rgba(66,133,244,0.4); }
+    70% { box-shadow: 0 0 0 12px rgba(66,133,244,0); }
+    100% { box-shadow: 0 0 0 0 rgba(66,133,244,0); }
+}
+</style>
 
     
     
@@ -2127,7 +2192,13 @@ super atentos, t resuelven todas las dudas q tengas.</div>
 
 
 
-
+<a href="https://search.google.com/local/writereview?placeid=TU_ID" 
+   target="_blank"
+   class="floating-review-btn"
+   title="Deja tu reseña">
+   <img src="https://img.icons8.com/color/48/google-logo.png" class="google-icon" alt="Google">
+   <span class="btn-text">DEJE SU RESEÑA</span>
+</a>
     
 
   
