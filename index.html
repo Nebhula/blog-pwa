@@ -1053,68 +1053,56 @@
 
 <style>
 .floating-review-btn {
-    /* Estilo base (igual para todos los dispositivos) */
+    /* Posición más alta (120px desde abajo) */
     position: fixed;
-    bottom: 20px;
+    bottom: 120px;
     right: 20px;
+    
+    /* Estilo rectangular */
     background: white;
-    border-radius: 50px;
+    border-radius: 25px;
     display: flex;
     align-items: center;
+    padding: 12px 25px;
     box-shadow: 0 3px 10px rgba(0,0,0,0.2);
     z-index: 9999;
-    padding: 12px 20px; /* Texto siempre visible en móvil */
     font-family: 'Poppins', sans-serif;
     font-weight: 700;
     font-size: 14px;
     color: #5f6368;
     text-decoration: none;
     border: 1px solid #f1f1f1;
-    animation: pulse 2s infinite;
 }
 
 .google-icon {
-    width: 28px;
-    height: 28px;
-    margin-right: 10px;
+    width: 24px;
+    height: 24px;
+    margin-right: 12px;
 }
 
-/* Efecto hover SOLO en escritorio */
-@media (hover: hover) and (min-width: 768px) {
+/* Efecto de ondas concéntricas (como señales) */
+@keyframes ripple {
+    0% {
+        box-shadow: 0 0 0 0 rgba(66, 133, 244, 0.6),
+                    0 0 0 0 rgba(66, 133, 244, 0.4);
+    }
+    100% {
+        box-shadow: 0 0 0 15px rgba(66, 133, 244, 0),
+                    0 0 0 30px rgba(66, 133, 244, 0);
+    }
+}
+.floating-review-btn {
+    animation: ripple 2s infinite;
+    overflow: visible; /* Para que no corte el efecto */
+}
+
+/* Asegurar visibilidad en móvil */
+@media (max-width: 768px) {
     .floating-review-btn {
-        width: 60px;
-        padding: 15px;
-        justify-content: center;
+        bottom: 100px;
+        padding: 10px 20px;
+        font-size: 13px;
     }
-    .btn-text {
-        display: none;
-    }
-    .floating-review-btn:hover {
-        width: auto;
-        padding: 15px 25px;
-    }
-    .floating-review-btn:hover .btn-text {
-        display: inline;
-        margin-left: 12px;
-    }
-}
-
-/* Mobile: Texto siempre visible */
-@media (max-width: 767px) {
-    .floating-review-btn {
-        font-size: 12px;
-        padding: 10px 15px;
-    }
-    .google-icon {
-        width: 24px;
-        height: 24px;
-    }
-}
-
-@keyframes pulse {
-    0% { box-shadow: 0 0 0 0 rgba(66,133,244,0.4); }
-    70% { box-shadow: 0 0 0 12px rgba(66,133,244,0); }
-    100% { box-shadow: 0 0 0 0 rgba(66,133,244,0); }
 }
 </style>
 
@@ -1567,7 +1555,7 @@ super atentos, t resuelven todas las dudas q tengas.</div>
    class="floating-review-btn"
    title="Deja tu reseña">
    <img src="https://img.icons8.com/color/48/google-logo.png" class="google-icon" alt="Google">
-   <span class="btn-text">DEJE SU RESEÑA</span>
+   <span>DEJE SU RESEÑA</span>
 </a>
 
             
