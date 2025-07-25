@@ -1052,56 +1052,66 @@
 
 
 <style>
-.floating-review-btn {
-    /* Posición más alta (120px desde abajo) */
-    position: fixed;
-    bottom: 120px;
-    right: 20px;
-    
-    /* Estilo rectangular */
-    background: white;
-    border-radius: 25px;
-    display: flex;
+/* CONTENEDOR PRINCIPAL (FLEX) */
+.botones-resenas {
+    display: flex;          /* Activa flexbox */
+    flex-direction: row;    /* Dirección horizontal (por defecto) */
+    gap: 10px;             /* Espacio entre botones */
+    width: max-content;    /* Ancho ajustado al contenido */
+    margin: 0 auto;        /* Centrado horizontal (opcional) */
+}
+
+/* ESTILO BASE PARA AMBOS BOTONES */
+.boton-resena {
+    /* Diseño alargado */
+    display: inline-flex;   /* Flex para alinear icono+texto */
     align-items: center;
-    padding: 12px 25px;
-    box-shadow: 0 3px 10px rgba(0,0,0,0.2);
-    z-index: 9999;
+    padding: 12px 20px;
+    border-radius: 25px;
+    
+    /* Estilo visual */
     font-family: 'Poppins', sans-serif;
-    font-weight: 700;
+    font-weight: 600;
     font-size: 14px;
-    color: #5f6368;
     text-decoration: none;
-    border: 1px solid #f1f1f1;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    transition: all 0.2s ease;
+    border: none;
+    cursor: pointer;
+    white-space: nowrap;    /* Evita saltos de línea */
 }
 
-.google-icon {
-    width: 24px;
-    height: 24px;
-    margin-right: 12px;
+/* BOTÓN "DEJE SU RESEÑA" */
+.dejar-resena {
+    background: white;
+    color: #5f6368;
+    border: 1px solid #e0e0e0;
 }
 
-/* Efecto de ondas concéntricas (como señales) */
-@keyframes ripple {
-    0% {
-        box-shadow: 0 0 0 0 rgba(66, 133, 244, 0.6),
-                    0 0 0 0 rgba(66, 133, 244, 0.4);
-    }
-    100% {
-        box-shadow: 0 0 0 15px rgba(66, 133, 244, 0),
-                    0 0 0 30px rgba(66, 133, 244, 0);
-    }
-}
-.floating-review-btn {
-    animation: ripple 2s infinite;
-    overflow: visible; /* Para que no corte el efecto */
+/* BOTÓN "VER RESEÑAS" */
+.ver-resenas {
+    background: #4285F4;
+    color: white;
 }
 
-/* Asegurar visibilidad en móvil */
-@media (max-width: 768px) {
-    .floating-review-btn {
-        bottom: 100px;
-        padding: 10px 20px;
-        font-size: 13px;
+/* EFECTO HOVER (sutil) */
+.boton-resena:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 3px 8px rgba(0,0,0,0.15);
+}
+
+/* ICONOS */
+.boton-resena img {
+    width: 18px;
+    height: 18px;
+    margin-right: 8px;
+}
+
+/* RESPONSIVE: Se apilan en móvil */
+@media (max-width: 480px) {
+    .botones-resenas {
+        flex-direction: column;
+        gap: 8px;
     }
 }
 </style>
@@ -1307,19 +1317,22 @@ super atentos, t resuelven todas las dudas q tengas.</div>
     </div>
   </div>
 
-  <div class='gr-view-all'>
-    <a class='gr-view-all-btn' href='https://search.google.com/local/reviews?placeid=YOUR_PLACE_ID' rel='noopener' target='_blank'>
-      <svg fill='none' height='16' stroke='currentColor' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' viewBox='0 0 24 24' width='16'>
-        <line x1='8' x2='21' y1='6' y2='6'/>
-        <line x1='8' x2='21' y1='12' y2='12'/>
-        <line x1='8' x2='21' y1='18' y2='18'/>
-        <line x1='3' x2='3.01' y1='6' y2='6'/>
-        <line x1='3' x2='3.01' y1='12' y2='12'/>
-        <line x1='3' x2='3.01' y1='18' y2='18'/>
-      </svg>
-      Ver todas las reseñas
-    </a>
-  </div>
+  <!-- CONTENEDOR FLEXIBLE (alineación horizontal) -->
+<div class="botones-resenas">
+  <!-- BOTÓN 1 -->
+  <a href="https://search.google.com/local/writereview?placeid=TU_ID" 
+     class="boton-resena dejar-resena">
+     <img src="https://img.icons8.com/color/24/google-logo.png" alt="Google">
+     DEJE SU RESEÑA
+  </a>
+  
+  <!-- BOTÓN 2 -->
+  <a href="#ver-resenas" 
+     class="boton-resena ver-resenas">
+     <img src="https://img.icons8.com/ios-filled/24/visible.png" alt="Ver">
+     VER RESEÑAS
+  </a>
+</div>
 </div>
 
 
@@ -1550,13 +1563,7 @@ super atentos, t resuelven todas las dudas q tengas.</div>
 
 
 
-<a href="https://search.google.com/local/writereview?placeid=TU_ID" 
-   target="_blank"
-   class="floating-review-btn"
-   title="Deja tu reseña">
-   <img src="https://img.icons8.com/color/48/google-logo.png" class="google-icon" alt="Google">
-   <span>DEJE SU RESEÑA</span>
-</a>
+
 
             
 
