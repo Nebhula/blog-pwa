@@ -1052,66 +1052,66 @@
 
 
 <style>
-/* CONTENEDOR PRINCIPAL (FLEX) */
-.botones-resenas {
-    display: flex;          /* Activa flexbox */
-    flex-direction: row;    /* Dirección horizontal (por defecto) */
-    gap: 10px;             /* Espacio entre botones */
-    width: max-content;    /* Ancho ajustado al contenido */
-    margin: 0 auto;        /* Centrado horizontal (opcional) */
+.contenedor-boton {
+    display: inline-block;
+    position: relative;
+    margin: 20px; /* Ajusta según necesites */
 }
 
-/* ESTILO BASE PARA AMBOS BOTONES */
 .boton-resena {
-    /* Diseño alargado */
-    display: inline-flex;   /* Flex para alinear icono+texto */
+    display: inline-flex;
     align-items: center;
-    padding: 12px 20px;
+    padding: 12px 25px;
     border-radius: 25px;
-    
-    /* Estilo visual */
+    background: white;
+    color: #5f6368;
     font-family: 'Poppins', sans-serif;
     font-weight: 600;
     font-size: 14px;
     text-decoration: none;
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-    transition: all 0.2s ease;
-    border: none;
-    cursor: pointer;
-    white-space: nowrap;    /* Evita saltos de línea */
-}
-
-/* BOTÓN "DEJE SU RESEÑA" */
-.dejar-resena {
-    background: white;
-    color: #5f6368;
     border: 1px solid #e0e0e0;
+    position: relative;
+    z-index: 1;
+    transition: all 0.3s ease;
+    cursor: pointer;
 }
 
-/* BOTÓN "VER RESEÑAS" */
-.ver-resenas {
-    background: #4285F4;
-    color: white;
+.efecto-onda {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(66, 133, 244, 0.1);
+    border-radius: 25px;
+    z-index: 0;
+    animation: onda 3s infinite;
+    opacity: 0;
 }
 
-/* EFECTO HOVER (sutil) */
+@keyframes onda {
+    0% { transform: scale(1); opacity: 0; }
+    50% { opacity: 0.3; }
+    100% { transform: scale(1.2); opacity: 0; }
+}
+
 .boton-resena:hover {
-    transform: translateY(-1px);
-    box-shadow: 0 3px 8px rgba(0,0,0,0.15);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.15);
 }
 
-/* ICONOS */
 .boton-resena img {
     width: 18px;
     height: 18px;
     margin-right: 8px;
 }
 
-/* RESPONSIVE: Se apilan en móvil */
+/* Versión móvil */
 @media (max-width: 480px) {
-    .botones-resenas {
-        flex-direction: column;
-        gap: 8px;
+    .boton-resena {
+        padding: 10px 20px;
+        font-size: 13px;
     }
 }
 </style>
@@ -1317,15 +1317,14 @@ super atentos, t resuelven todas las dudas q tengas.</div>
     </div>
   </div>
 <br/>
-   <!-- CONTENEDOR FLEXIBLE (alineación horizontal) -->
-<div class="botones-resenas">
-  <!-- BOTÓN 1 -->
-  <a href="https://search.google.com/local/writereview?placeid=TU_ID" 
-     class="boton-resena dejar-resena">
+  <div class="contenedor-boton">
+  <a href="https://g.page/r/CVbJmvjvAXNpEBM/review" 
+     target="_blank"
+     class="boton-resena">
      <img src="https://img.icons8.com/color/24/google-logo.png" alt="Google">
      DEJE SU RESEÑA
   </a>
-  
+  <span class="efecto-onda"></span>
 </div>
 </div>
 
