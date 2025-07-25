@@ -1116,6 +1116,27 @@
 }
 </style>
     
+
+
+ <style>
+    /* Evitar scroll vertical en body */
+    body, html {
+      overflow-x: hidden;
+      overflow-y: hidden;
+      height: 100vh;
+    }
+    /* Scroll interno para modal si se pasa */
+    .modal-content {
+      max-height: 85vh;
+      overflow-y: auto;
+      -webkit-overflow-scrolling: touch;
+    }
+  </style>
+
+
+
+
+
     
 </head>
 <body>
