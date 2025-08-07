@@ -796,260 +796,108 @@
 
 
 <style>
-  /* Reset interno para evitar conflictos */
-  .gr-container * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: -apple-system, BlinkMacSystemFont, &#39;Segoe UI&#39;, Roboto, Oxygen, Ubuntu, Cantarell, &#39;Open Sans&#39;, &#39;Helvetica Neue&#39;, sans-serif;
+  /* Estilos para el carrusel de reseñas */
+  .reviews-container {
+    margin: 20px 0;
+    padding: 0 15px;
   }
   
-  .gr-container {
-    --gr-primary: #d7e4e1;
-    --gr-success: #34a853;
-    --gr-danger: #FFB400;
-    --gr-warning: #FFB400;
-    --gr-text: #202124;
-    --gr-text-light: #000;
-    --gr-border: #e0e0e0;
-    --gr-bg: #fff;
-    --gr-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
-    
-    max-width: 1200px;
-    margin: 30px auto;
-    color: var(--gr-text);
-    box-shadow: var(--gr-shadow);
-    border-radius: 10px;
-    padding: 25px;
-    background: var(--gr-bg);
-  }
-
-  .gr-header {
-    display: flex;
-    align-items: center;
-    gap: 15px;
-    margin-bottom: 25px;
-    padding-bottom: 15px;
-    border-bottom: 1px solid var(--gr-border);
-  }
-  
-  .gr-header img {
-    width: 32px;
-    height: 32px;
-    object-fit: contain;
-  }
-  
-  .gr-header h2 {
-    font-size: 1.8rem;
-    margin: 0;
-    font-weight: 700;
-    display: flex;
-    align-items: center;
-    gap: 12px;
-    color: var(--gr-text);
-  }
-  
-  .gr-count {
-    font-weight: 700;
-    font-size: 1.1rem;
-    color: var(--gr-primary);
-    background: #0d0c22;
-    padding: 5px 12px;
-    border-radius: 20px;
-    border: 1px solid var(--gr-border);
-  }
-  
-  .gr-header-buttons {
-    margin-left: auto;
-    display: flex;
-    gap: 15px;
-  }
-  
-  .gr-header-btn {
-    padding: 8px 18px;
-    background: var(--gr-success);
-    color: white;
-    font-size: 1rem;
-    border-radius: 6px;
-    text-decoration: none;
+  .reviews-title {
+    font-size: 1.2rem;
     font-weight: 600;
-    transition: all 0.3s ease;
+    margin-bottom: 15px;
+    color: var(--text-color);
+    padding-left: 10px;
+  }
+  
+  .reviews-carousel {
     display: flex;
-    align-items: center;
-    gap: 8px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    overflow-x: auto;
+    gap: 15px;
+    padding: 10px 5px;
+    scrollbar-width: thin;
+    scrollbar-color: var(--primary-color) var(--secondary-color);
+    -webkit-overflow-scrolling: touch;
   }
   
-  .gr-header-btn:hover {
-    background: #2d9249;
-    transform: translateY(-2px);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+  .reviews-carousel::-webkit-scrollbar {
+    height: 6px;
   }
   
-  .gr-grid {
-    display: grid;
-    gap: 20px;
-    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-  }
-  
-  .gr-card {
-    border: 1px solid var(--gr-border);
+  .reviews-carousel::-webkit-scrollbar-track {
+    background: var(--secondary-color);
     border-radius: 10px;
-    padding: 18px 20px;
-    background: var(--gr-bg);
+  }
+  
+  .reviews-carousel::-webkit-scrollbar-thumb {
+    background-color: var(--primary-color);
+    border-radius: 10px;
+  }
+  
+  .review-card {
+    min-width: 280px;
+    background: white;
+    border-radius: 12px;
+    padding: 15px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    flex-shrink: 0;
+  }
+  
+  .review-header {
     display: flex;
-    flex-direction: column;
     justify-content: space-between;
-    transition: all 0.3s ease;
-    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
-  }
-  
-  .gr-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
-    border-color: #d2e3fc;
-  }
-  
-  .gr-card-header {
-    display: flex;
     align-items: center;
-    justify-content: space-between;
-    margin-bottom: 12px;
+    margin-bottom: 10px;
   }
   
-  .gr-user-info {
+  .review-user {
     display: flex;
     align-items: center;
     gap: 10px;
   }
   
-  .gr-avatar {
-    width: 36px;
-    height: 36px;
+  .review-avatar {
+    width: 40px;
+    height: 40px;
     border-radius: 50%;
-    background-color: #f1f1f1;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: #555;
-    font-weight: bold;
-    font-size: 16px;
+    object-fit: cover;
   }
   
-  .gr-username {
-    font-weight: 700;
-    font-size: 1.05rem;
-    color: var(--gr-text);
+  .review-name {
+    font-weight: 600;
+    font-size: 0.95rem;
   }
   
-  .gr-date {
-    font-size: 0.75rem;
-    color: var(--gr-text-light);
+  .review-date {
+    font-size: 0.7rem;
+    color: var(--text-light);
     margin-top: 2px;
   }
   
-  .gr-rating {
-    color: var(--gr-warning);
-    font-weight: 700;
-    font-size: 1rem;
-    white-space: nowrap;
+  .review-stars {
+    color: #FFB400;
+    font-size: 0.9rem;
   }
   
-  .gr-text {
-    font-size: 0.95rem;
-    line-height: 1.5;
-    color: #444;
-    margin: 12px 0 18px;
-    flex-grow: 1;
-  }
-  
-  .gr-btn-container {
-    text-align: right;
-  }
-  
-  .gr-btn {
-    padding: 6px 12px;
+  .review-text {
     font-size: 0.85rem;
-    background: var(--gr-primary);
-    color: black;
-    border-radius: 6px;
+    line-height: 1.5;
+    color: var(--text-color);
+    margin-bottom: 10px;
+  }
+  
+  .review-link {
+    display: inline-block;
+    font-size: 0.75rem;
+    color: var(--primary-color);
     text-decoration: none;
     font-weight: 600;
-    transition: all 0.3s ease;
-    display: inline-flex;
-    align-items: center;
-    gap: 5px;
+    margin-top: 5px;
   }
   
-  .gr-btn:hover {
-    background: #e0004d;
-    transform: translateY(-1px);
-  }
-  
-  .gr-view-all {
-    margin-top: 30px;
-    text-align: center;
-    padding-top: 20px;
-    border-top: 1px solid var(--gr-border);
-  }
-  
-  .gr-view-all-btn {
-    padding: 10px 24px;
-    font-size: 1rem;
-    background: var(--gr-danger);
-    color: white;
-    border-radius: 6px;
-    font-weight: 700;
-    text-decoration: none;
-    transition: all 0.3s ease;
-    display: inline-flex;
-    align-items: center;
-    gap: 8px;
-    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
-  }
-  
-  .gr-view-all-btn:hover {
-    background: #d33426;
-    transform: translateY(-2px);
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
-  }
-  
-  .gr-stars {
-    color: var(--gr-warning);
-    letter-spacing: 2px;
-    font-size: 1.1em;
-  }
-  
-  /* Animaciones */
-  @keyframes gr-fadeIn {
-    from { opacity: 0; transform: translateY(10px); }
-    to { opacity: 1; transform: translateY(0); }
-  }
-  
-  .gr-card {
-    animation: gr-fadeIn 0.4s ease forwards;
-    opacity: 0;
-  }
-  
-  .gr-card:nth-child(1) { animation-delay: 0.1s; }
-  .gr-card:nth-child(2) { animation-delay: 0.2s; }
-  .gr-card:nth-child(3) { animation-delay: 0.3s; }
-  .gr-card:nth-child(4) { animation-delay: 0.4s; }
-  
-  /* Responsive */
-  @media (max-width: 768px) {
-    .gr-header {
-      flex-wrap: wrap;
-    }
-    
-    .gr-header-buttons {
-      margin-left: 0;
-      width: 100%;
-      justify-content: flex-end;
-    }
-    
-    .gr-grid {
-      grid-template-columns: 1fr;
+  @media (max-width: 480px) {
+    .review-card {
+      min-width: 85vw;
     }
   }
 </style>
@@ -1320,108 +1168,76 @@
     
   </div>
 
-  <div class='gr-grid'>
-    <!-- Review 1 -->
-    <div class='gr-card'>
-      <div class='gr-card-header'>
-        <div class='gr-user-info'>
-          <div class='gr-avatar'><img alt='' border='0' data-original-height='45' data-original-width='45' src='https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgTjYCZhzp49FIZ0DIdQGCZ8aEUW1NQBDAc5rtEv6JdiewWE2l7PskZeWRsiGb1ibiRbC0qb14L2ifK_B6FxGmA09K3wixDIKNJ-YYMw714G1K2565WEpM5R8GNj2haoXnbzaC30ywPiUoLRW0pkQQxhyphenhyphen0-hLdWKAZ67PgTRa3Xf7XjQsi4dJusxefL-G4/s1600/unnamed%20%2817%29.png'/></div>
+  <!-- Reemplaza la sección de reseñas actual con este código -->
+<div class="reviews-container">
+  <h3 class="reviews-title">Reseñas de nuestros socios</h3>
+  
+  <div class="reviews-carousel">
+    <!-- Reseña 1 -->
+    <div class="review-card">
+      <div class="review-header">
+        <div class="review-user">
+          <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgTjYCZhzp49FIZ0DIdQGCZ8aEUW1NQBDAc5rtEv6JdiewWE2l7PskZeWRsiGb1ibiRbC0qb14L2ifK_B6FxGmA09K3wixDIKNJ-YYMw714G1K2565WEpM5R8GNj2haoXnbzaC30ywPiUoLRW0pkQQxhyphenhyphen0-hLdWKAZ67PgTRa3Xf7XjQsi4dJusxefL-G4/s1600/unnamed%20%2817%29.png" alt="Elenika" class="review-avatar">
           <div>
-            <div class='gr-username'>Elenika Fernandez</div>
-            <div class='gr-date'>Hace 1 año</div>
+            <div class="review-name">Elenika Fernandez</div>
+            <div class="review-date">Hace 1 año</div>
           </div>
         </div>
-        <div class='gr-rating'><span class='gr-stars'>&#9733;&#9733;&#9733;&#9733;&#9733;</span></div>
+        <div class="review-stars">★★★★★</div>
       </div>
-      <div class='gr-text'>Muy contenta con ellos, el trato fenomenal y
-super atentos, t resuelven todas las dudas q tengas.</div>
-      <div class='gr-btn-container'>
-        <a class='gr-btn' href='https://maps.app.goo.gl/NCMsntJCMh7gvu958' rel='noopener' target='_blank'>
-          <svg fill='none' height='14' stroke='currentColor' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' viewBox='0 0 24 24' width='14'>
-            <path d='M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6'/>
-            <polyline points='15 3 21 3 21 9'/>
-            <line x1='10' x2='21' y1='14' y2='3'/>
-          </svg>
-          Ver reseña
-        </a>
-      </div>
+      <p class="review-text">Muy contenta con ellos, el trato fenomenal y super atentos, te resuelven todas las dudas que tengas.</p>
+      <a href="https://maps.app.goo.gl/NCMsntJCMh7gvu958" class="review-link" target="_blank">Ver reseña completa →</a>
     </div>
-
-    <!-- Review 2 -->
-    <div class='gr-card'>
-      <div class='gr-card-header'>
-        <div class='gr-user-info'>
-          <div class='gr-avatar'><img alt='' border='0' data-original-height='45' data-original-width='45' src='https://lh3.googleusercontent.com/a-/ALV-UjVnjLILEsjid-NBt3YiTIwjL1RwOdfmocczmW7J1yhhOCjfJad9=w45-h45-p-rp-mo-br100'/></div>
+    
+    <!-- Reseña 2 -->
+    <div class="review-card">
+      <div class="review-header">
+        <div class="review-user">
+          <img src="https://lh3.googleusercontent.com/a-/ALV-UjVnjLILEsjid-NBt3YiTIwjL1RwOdfmocczmW7J1yhhOCjfJad9=w45-h45-p-rp-mo-br100" alt="Zepky" class="review-avatar">
           <div>
-            <div class='gr-username'>Zepky Alquila tu web</div>
-            <div class='gr-date'>Hace 1 año</div>
+            <div class="review-name">Zepky Alquila tu web</div>
+            <div class="review-date">Hace 1 año</div>
           </div>
         </div>
-        <div class='gr-rating'><span class='gr-stars'>&#9733;&#9733;&#9733;&#9733;&#9733;</span></div>
+        <div class="review-stars">★★★★★</div>
       </div>
-      <div class='gr-text'>Soy de Alicante, y me federe en socnas, la verdad el presidente siempre atento y me resolvió todas las dudas y el carnet y anillas siempre me llegan a tiempo, la verdad muy contenta después de varios años sin problemas.</div>
-      <div class='gr-btn-container'>
-        <a class='gr-btn' href='https://www.google.com/maps/review?id=review2' rel='noopener' target='_blank'>
-          <svg fill='none' height='14' stroke='currentColor' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' viewBox='0 0 24 24' width='14'>
-            <path d='M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6'/>
-            <polyline points='15 3 21 3 21 9'/>
-            <line x1='10' x2='21' y1='14' y2='3'/>
-          </svg>
-          Ver reseña
-        </a>
-      </div>
+      <p class="review-text">Soy de Alicante, y me federe en socnas, la verdad el presidente siempre atento y me resolvió todas las dudas y el carnet y anillas siempre me llegan a tiempo.</p>
+      <a href="https://www.google.com/maps/review?id=review2" class="review-link" target="_blank">Ver reseña completa →</a>
     </div>
-
-    <!-- Review 3 -->
-    <div class='gr-card'>
-      <div class='gr-card-header'>
-        <div class='gr-user-info'>
-          <div class='gr-avatar'>C</div>
+    
+    <!-- Reseña 3 -->
+    <div class="review-card">
+      <div class="review-header">
+        <div class="review-user">
+          <div class="review-avatar" style="background: #d7e4e1; display: flex; align-items: center; justify-content: center; color: #003620; font-weight: bold;">C</div>
           <div>
-            <div class='gr-username'>Carlos Mendoza</div>
-            <div class='gr-date'>Hace 3 días</div>
+            <div class="review-name">Carlos Mendoza</div>
+            <div class="review-date">Hace 3 días</div>
           </div>
         </div>
-        <div class='gr-rating'><span class='gr-stars'>&#9733;&#9733;&#9733;&#9733;&#9733;</span></div>
+        <div class="review-stars">★★★★★</div>
       </div>
-      <div class='gr-text'>Producto de alta calidad que superó mis expectativas. La atención al cliente fue excepcional, con respuestas inmediatas a todas mis preguntas. Definitivamente volveré a comprar aquí.</div>
-      <div class='gr-btn-container'>
-        <a class='gr-btn' href='https://www.google.com/maps/review?id=review3' rel='noopener' target='_blank'>
-          <svg fill='none' height='14' stroke='currentColor' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' viewBox='0 0 24 24' width='14'>
-            <path d='M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6'/>
-            <polyline points='15 3 21 3 21 9'/>
-            <line x1='10' x2='21' y1='14' y2='3'/>
-          </svg>
-          Ver reseña
-        </a>
-      </div>
+      <p class="review-text">Producto de alta calidad que superó mis expectativas. La atención al cliente fue excepcional, con respuestas inmediatas a todas mis preguntas.</p>
+      <a href="https://www.google.com/maps/review?id=review3" class="review-link" target="_blank">Ver reseña completa →</a>
     </div>
-
-    <!-- Review 4 -->
-    <div class='gr-card'>
-      <div class='gr-card-header'>
-        <div class='gr-user-info'>
-          <div class='gr-avatar'>L</div>
+    
+    <!-- Reseña 4 -->
+    <div class="review-card">
+      <div class="review-header">
+        <div class="review-user">
+          <div class="review-avatar" style="background: #d7e4e1; display: flex; align-items: center; justify-content: center; color: #003620; font-weight: bold;">L</div>
           <div>
-            <div class='gr-username'>Lucía Torres</div>
-            <div class='gr-date'>Hace 2 meses</div>
+            <div class="review-name">Lucía Torres</div>
+            <div class="review-date">Hace 2 meses</div>
           </div>
         </div>
-        <div class='gr-rating'><span class='gr-stars'>&#9733;&#9733;&#9733;&#9734;&#9734;</span></div>
+        <div class="review-stars">★★★☆☆</div>
       </div>
-      <div class='gr-text'>El producto cumple con lo prometido, pero la entrega tardó casi el doble del tiempo estimado. La comunicación podría mejorar, ya que no recibí actualizaciones sobre el estado de mi pedido.</div>
-      <div class='gr-btn-container'>
-        <a class='gr-btn' href='https://www.google.com/maps/review?id=review4' rel='noopener' target='_blank'>
-          <svg fill='none' height='14' stroke='currentColor' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' viewBox='0 0 24 24' width='14'>
-            <path d='M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6'/>
-            <polyline points='15 3 21 3 21 9'/>
-            <line x1='10' x2='21' y1='14' y2='3'/>
-          </svg>
-          Ver reseña
-        </a>
-      </div>
+      <p class="review-text">El producto cumple con lo prometido, pero la entrega tardó casi el doble del tiempo estimado. La comunicación podría mejorar.</p>
+      <a href="https://www.google.com/maps/review?id=review4" class="review-link" target="_blank">Ver reseña completa →</a>
     </div>
   </div>
+</div>
 
 </div>
 
