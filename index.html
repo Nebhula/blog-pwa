@@ -673,6 +673,30 @@
         }
     </style>
    <style>
+/* ESTILOS CORREGIDOS - SIN AFECTAR ENCABEZADO */
+.gr-container {
+    background: white;
+    border-radius: 0; /* ¡Asesinado! */
+    padding: 20px;
+    margin: 20px 0;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+    position: relative;
+    overflow: hidden; /* Contiene los pseudo-elementos */
+}
+
+/* Bordes solo en tarjetas (nunca en header) */
+.gr-card {
+    border-radius: 10px; /* Solo aquí */
+    /* ... (mantén el resto de estilos) ... */
+}
+
+/* Elimina bordes de cualquier header */
+.gr-header {
+    border-radius: 0 !important;
+}
+
+
+       
     /* Estilos mejorados para el carrusel de reseñas */
     .gr-container {
         background: white;
@@ -992,6 +1016,10 @@
             background-color: #1e40af;
         }
     </style>
+
+
+
+    
 </head>
 <body>
     <div class="card-container">
