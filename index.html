@@ -672,251 +672,195 @@
             box-sizing: border-box;
         }
     </style>
-    <style>
-        /* Reset interno para evitar conflictos */
-        .gr-container * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-        }
-        .gr-container {
-            --gr-primary: #d7e4e1;
-            --gr-success: #34a853;
-            --gr-danger: #FFB400;
-            --gr-warning: #FFB400;
-            --gr-text: #202124;
-            --gr-text-light: #000;
-            --gr-border: #e0e0e0;
-            --gr-bg: #fff;
-            --gr-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
-            max-width: 100%;
-            margin: 20px 0;
-            color: var(--gr-text);
-            padding: 0 20px;
-            box-sizing: border-box;
-        }
-        .gr-header {
-            display: flex;
-            align-items: center;
-            gap: 15px;
-            margin-bottom: 25px;
-            padding-bottom: 15px;
-            border-bottom: 1px solid var(--gr-border);
-        }
-        .gr-header img {
-            width: 32px;
-            height: 32px;
-            object-fit: contain;
-        }
-        .gr-header h2 {
-            font-size: 1.8rem;
-            margin: 0;
-            font-weight: 700;
-            display: flex;
-            align-items: center;
-            gap: 12px;
-            color: var(--gr-text);
-        }
-        .gr-count {
-            font-weight: 700;
-            font-size: 1.1rem;
-            color: var(--gr-primary);
-            background: #0d0c22;
-            padding: 5px 12px;
-            border-radius: 20px;
-            border: 1px solid var(--gr-border);
-        }
-        .gr-header-buttons {
-            margin-left: auto;
-            display: flex;
-            gap: 15px;
-        }
-        .gr-header-btn {
-            padding: 8px 18px;
-            background: var(--gr-success);
-            color: white;
-            font-size: 1rem;
-            border-radius: 6px;
-            text-decoration: none;
-            font-weight: 600;
-            transition: all 0.3s ease;
-            display: flex;
-            align-items: center;
-            gap: 8px;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-        }
-        .gr-header-btn:hover {
-            background: #2d9249;
-            transform: translateY(-2px);
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
-        }
-        .gr-grid {
-            display: flex;
-            overflow-x: auto;
-            scroll-behavior: smooth;
-            -webkit-overflow-scrolling: touch;
-            gap: 15px;
-            padding: 10px 0;
-            margin: 0 -20px;
-            padding: 0 20px;
-            scrollbar-width: thin;
-            scrollbar-color: #c1c1c1 #f1f1f1;
-        }
-        /* Barra de desplazamiento personalizada */
-        .gr-grid::-webkit-scrollbar {
-            height: 6px;
-        }
-        .gr-grid::-webkit-scrollbar-track {
-            background: #f1f1f1;
-            border-radius: 3px;
-        }
-        .gr-grid::-webkit-scrollbar-thumb {
-            background: #c1c1c1;
-            border-radius: 3px;
-        }
-        .gr-grid::-webkit-scrollbar-thumb:hover {
-            background: #a8a8a8;
-        }
-        .gr-card {
-            min-width: 280px;
-            border: 1px solid var(--gr-border);
-            border-radius: 10px;
-            padding: 18px 20px;
-            background: var(--gr-bg);
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-            transition: all 0.3s ease;
-            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
-            flex: 0 0 auto;
-        }
-        .gr-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
-            border-color: #d2e3fc;
-        }
-        .gr-card-header {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            margin-bottom: 12px;
-        }
-        .gr-user-info {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-        }
-        .gr-avatar {
-            width: 36px;
-            height: 36px;
-            border-radius: 50%;
-            background-color: #f1f1f1;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: #555;
-            font-weight: bold;
-            font-size: 16px;
-        }
-        .gr-username {
-            font-weight: 700;
-            font-size: 1.05rem;
-            color: var(--gr-text);
-        }
-        .gr-date {
-            font-size: 0.75rem;
-            color: var(--gr-text-light);
-            margin-top: 2px;
-        }
-        .gr-rating {
-            color: var(--gr-warning);
-            font-weight: 700;
-            font-size: 1rem;
-            white-space: nowrap;
-        }
-        .gr-text {
-            font-size: 0.95rem;
-            line-height: 1.5;
-            color: #444;
-            margin: 12px 0 18px;
-            flex-grow: 1;
-        }
-        .gr-btn-container {
-            text-align: right;
-        }
-        .gr-btn {
-            padding: 6px 12px;
-            font-size: 0.85rem;
-            background: var(--gr-primary);
-            color: black;
-            border-radius: 6px;
-            text-decoration: none;
-            font-weight: 600;
-            transition: all 0.3s ease;
-            display: inline-flex;
-            align-items: center;
-            gap: 5px;
-        }
-        .gr-btn:hover {
-            background: #e0004d;
-            transform: translateY(-1px);
-        }
-        .gr-view-all {
-            margin-top: 30px;
-            text-align: center;
-            padding-top: 20px;
-            border-top: 1px solid var(--gr-border);
-        }
-        .gr-view-all-btn {
-            padding: 10px 24px;
-            font-size: 1rem;
-            background: var(--gr-danger);
-            color: white;
-            border-radius: 6px;
-            font-weight: 700;
-            text-decoration: none;
-            transition: all 0.3s ease;
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
-        }
-        .gr-view-all-btn:hover {
-            background: #d33426;
-            transform: translateY(-2px);
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
-        }
-        .gr-stars {
-            color: var(--gr-warning);
-            letter-spacing: 2px;
-            font-size: 1.1em;
-        }
-        /* Animaciones */
-        @keyframes gr-fadeIn {
-            from { opacity: 0; transform: translateY(10px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-        .gr-card {
-            animation: gr-fadeIn 0.4s ease forwards;
-            opacity: 0;
-        }
-        .gr-card:nth-child(1) { animation-delay: 0.1s; }
-        .gr-card:nth-child(2) { animation-delay: 0.2s; }
-        .gr-card:nth-child(3) { animation-delay: 0.3s; }
-        .gr-card:nth-child(4) { animation-delay: 0.4s; }
-        /* Responsive */
-        @media (max-width: 768px) {
-            .gr-header {
-                flex-wrap: wrap;
-            }
-            .gr-header-buttons {
-                margin-left: 0;
-                width: 100%;
-                justify-content: flex-end;
-            }
-        }
-    </style>
+   <style>
+    /* Estilos mejorados para el carrusel de reseñas */
+    .gr-container {
+        background: white;
+        border-radius: 12px;
+        padding: 20px;
+        margin: 20px 0;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+    }
+    
+    .gr-header {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        margin-bottom: 20px;
+    }
+    
+    .gr-header h2 {
+        font-size: 1.2rem;
+        margin: 0;
+        color: #333;
+    }
+    
+    .gr-count {
+        background: #f5f5f5;
+        padding: 5px 12px;
+        border-radius: 20px;
+        font-size: 0.9rem;
+        color: #666;
+    }
+    
+    .gr-stars {
+        color: #FFB400;
+        letter-spacing: 2px;
+    }
+    
+    .gr-grid {
+        display: flex;
+        overflow-x: auto;
+        gap: 15px;
+        padding-bottom: 15px;
+        scrollbar-width: thin;
+        scrollbar-color: #72ACA0 #f1f1f1;
+    }
+    
+    .gr-grid::-webkit-scrollbar {
+        height: 6px;
+    }
+    
+    .gr-grid::-webkit-scrollbar-track {
+        background: #f1f1f1;
+        border-radius: 3px;
+    }
+    
+    .gr-grid::-webkit-scrollbar-thumb {
+        background: #72ACA0;
+        border-radius: 3px;
+    }
+    
+    .gr-card {
+        min-width: 280px;
+        background: white;
+        border-radius: 10px;
+        padding: 18px;
+        box-shadow: 0 3px 10px rgba(0,0,0,0.05);
+        border: 1px solid #eee;
+        transition: all 0.3s ease;
+    }
+    
+    .gr-card:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+    }
+    
+    .gr-card-header {
+        display: flex;
+        align-items: flex-start;
+        margin-bottom: 12px;
+    }
+    
+    .gr-avatar {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        background: #f5f5f5;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        overflow: hidden;
+        margin-right: 12px;
+    }
+    
+    .gr-avatar img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+    
+    .gr-user-info {
+        flex: 1;
+    }
+    
+    .gr-username {
+        font-weight: 600;
+        font-size: 0.95rem;
+        color: #333;
+    }
+    
+    .gr-date {
+        font-size: 0.75rem;
+        color: #999;
+        margin-top: 2px;
+    }
+    
+    .gr-rating {
+        color: #FFB400;
+        font-weight: 700;
+    }
+    
+    .gr-text {
+        font-size: 0.9rem;
+        line-height: 1.5;
+        color: #555;
+        margin: 12px 0;
+        white-space: normal;
+    }
+    
+    .gr-btn {
+        display: inline-flex;
+        align-items: center;
+        padding: 6px 12px;
+        background: #72ACA0;
+        color: white;
+        border-radius: 6px;
+        font-size: 0.85rem;
+        text-decoration: none;
+        transition: all 0.3s ease;
+    }
+    
+    .gr-btn:hover {
+        background: #5d8f83;
+    }
+    
+    .gr-btn svg {
+        margin-right: 5px;
+    }
+    
+    /* Animaciones */
+    @keyframes fadeIn {
+        from { opacity: 0; transform: translateY(10px); }
+        to { opacity: 1; transform: translateY(0); }
+    }
+    
+    .gr-card {
+        animation: fadeIn 0.4s ease forwards;
+        opacity: 0;
+    }
+    
+    .gr-card:nth-child(1) { animation-delay: 0.1s; }
+    .gr-card:nth-child(2) { animation-delay: 0.2s; }
+    .gr-card:nth-child(3) { animation-delay: 0.3s; }
+    .gr-card:nth-child(4) { animation-delay: 0.4s; }
+    
+    /* Efecto de sombra en los extremos del carrusel */
+    .gr-container {
+        position: relative;
+    }
+    
+    .gr-container::before,
+    .gr-container::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        width: 20px;
+        pointer-events: none;
+        z-index: 1;
+    }
+    
+    .gr-container::before {
+        left: 0;
+        background: linear-gradient(to right, white, rgba(255,255,255,0));
+    }
+    
+    .gr-container::after {
+        right: 0;
+        background: linear-gradient(to left, white, rgba(255,255,255,0));
+    }
+</style>
     <style>
         .contenedor-boton {
             display: inline-block;
