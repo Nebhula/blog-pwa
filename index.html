@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -8,9 +7,21 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap @5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
 <!-- Tailwind CSS -->
   <script src="https://cdn.tailwindcss.com"></script>
+
   <!-- Alpine.js para interactividad -->
   <script src="https://unpkg.com/alpinejs" defer></script>
+
     <title>Carnet Digital para socios, federaciones y asociaciones SOCNAS DIGI</title>
+
+
+  
+
+
+
+
+
+
+    
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href=" https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css ">
     <link rel="manifest" href="/destinoanimal/manifest.json">
@@ -19,17 +30,20 @@
     <meta content='yes' name='apple-mobile-web-app-capable'>
     <meta content='SOCNAS DIGI' name='apple-mobile-web-app-title'>
     <meta content='black-translucent' name='apple-mobile-web-app-status-bar-style'>
+
     <!-- Iconos iOS -->
     <link href='https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEg-6saJYjDfwZ-JrBZ8wbr5jX9CPXO4g3V3FVU2EEz85KC-8nVT0uCtTY8jee8-at90LGT4qMektbQRkCjEnoUw0BIVyEtgATKbQT3RaturL87-lLraXWAF5YrcweJgR3OsRX3kf3aoZCyVRDZoiZpasPbNp2jCB9-Q7HgC444Ky23PoK4xyT1bjsfcNxR8/s1600/Dise%C3%B1o%20sin%20t%C3%ADtulo%20%2841%29.png ' rel='apple-touch-icon' sizes='180x180'>
     <link href='https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjXu44k9ZZpuAe8hshb77hyIsv1hQeRXeavje9LxyENG4hLlTHgud8BkA6ZiG81JIwmFXQQPN5svxWDrXLeQVtea-kmgXU1BKrW_OghQxKb2lmUBoDT6eWrcC4WCmO9uYRNBnMx8cJR35k_1AjPFHm-Gds43AXG-ESdosGwzlStaNZxtfbwFvohuh9wfzWo/s1600/Dise%C3%B1o%20sin%20t%C3%ADtulo%20%2842%29.png ' rel='apple-touch-icon' sizes='167x167'>
     <link href='https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEir_1ZsA2bV6Lpn-ksRLKw2YWavDGnomTlnzm9f15lbKIaMoTfwRplvllNqQB9dcMuMvAZXD-Z60Qy5L5y9XGTD4m4lIIBZO5em_YBkkxHgyPQhWU2M70ng0WdnuZik9qrskni0QjjCmsRPt9GOo0ovBlMTYhjIEIBB4gSvNS-1AqavlPAoeLRvMtLgp22w/s1600/Dise%C3%B1o%20sin%20t%C3%ADtulo%20%2843%29.png ' rel='apple-touch-icon' sizes='152x152'>
     <link href='https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgtjzjleuNWB_pRvWfiyqBGbl8xAEXwsRh-IRLrjc3H2g_7wHePKVSwGdoAcYg5poP2OgP4i76RlqnUhgO3wzqLaixfi3QDFcRq55jSm3qxM7VlRbSjTPmwk5V4fuaHzMta6oMADETr6tQ99AtFsrFMjgVrJ9hAs2JDZWBKqEd5ORoEA7-6Eg8ouXpLfBq8/s1600/Dise%C3%B1o%20sin%20t%C3%ADtulo%20%2844%29.png ' rel='apple-touch-icon' sizes='120x120'>
+
     <!-- Splash Screens iPhone -->
     <link href='https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgCpzk3DiaWjy3qYWZF0yBzssFnpfRfwAKYMdI88ILPdZ-OdTDxGIAKu07E37pCdwtHapxPfqwFFd6NYK7zndmfhK1ziPIs53DstDepizZVgSi6ooeF_gKySCN179vJdbf_GkI_EukFDb0IAK-ssO4Wg_eH6vfgGnYKddc_B_cKap6wnO6BFMWFVG-RDqQM/s1600/Dise%C3%B1o%20sin%20t%C3%ADtulo%20%2836%29.png ' media='(device-width: 375px) and (device-height: 667px) and (-webkit-device-pixel-ratio: 2)' rel='apple-touch-startup-image'>
     <link href='https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhHAn6Zear-r-KZI89i32qqcTgyK8yNQqnI8R9tqhllgTmWFTF0sYMsBK9IYl686KsTg_i-ZzoZow1I98jZ6-DIozLEvuL66HiXapCTytdHEMuM-VRbRTa_E-QpSV6FLWO4-9aVFuxGCgf_-gwj2P6GtyqgH183a1SOykdSknIgGeLYf45-OzvBVSgAOpGN/s1600/Dise%C3%B1o%20sin%20t%C3%ADtulo%20%2837%29.png ' media='(device-width: 414px) and (device-height: 736px) and (-webkit-device-pixel-ratio: 3)' rel='apple-touch-startup-image'>
     <link href='https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEg84oOYyBoMKx0rh7D4qTOmgOHhltoKhFL-63hbzBqFl10w9Qmy46ZUKk1ttGRM3Zx7wr131K754Zl5LtWjHmybOoq1NM0ofQaDYuGpwqJ74BDhF3as70JkFZ8uR-SJp0WIsukiCFhj0c09Wh9-YbUEJy23ToWlM4oobk5HBtqdopuBZ5LbIf30z1pPOspf/s1600/Dise%C3%B1o%20sin%20t%C3%ADtulo%20%2838%29.png ' media='(device-width: 375px) and (device-height: 812px) and (-webkit-device-pixel-ratio: 3)' rel='apple-touch-startup-image'>
     <link href='https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEh2UCQR2cm-Q0ldll2vQ7w2I_m0fnfzKInRljSFTNh75OQYV76_CbHkQfYt8XQQvObx2MEsLcI_WZfGBjuA3ZPkTkT7UsMYr2Djs_1Dx_9yB8WaKkpxFYJO7cWqet1o9GkJ2DASH2GmQ-GFACyuRLrf6obmbGiT_C8EJQyT0Ex9xtp6-FYyv-pZwFB0mdx-/s1600/Dise%C3%B1o%20sin%20t%C3%ADtulo%20%2839%29.png ' media='(device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 2)' rel='apple-touch-startup-image'>
     <link href='https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiMPBCwNVMi-8m0TIpZ4E-xEsNDLx00hg5jbQf3qyeMWoLe38JlyO4YmBnk4ubkoWvGWUfNamMvsJudOXWT3qhHpt-M2lewPm6sjWaU5k278TDdGpITKxGW61pq-PV6gyo-mPTm1aojZSHpahKAmkC88_q3Ppw5wPhaUBo3PmIpVVXdzUznBKxzychEPImf/s1600/Dise%C3%B1o%20sin%20t%C3%ADtulo%20%2840%29.png ' media='(device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 3)' rel='apple-touch-startup-image'>
+
     <style>
       :root {
             --primary-color: #72ACA0;
@@ -47,6 +61,7 @@
             margin: 0;
             padding: 0;
         }
+
         html, body {
             width: 100%;
             height: 100%;
@@ -55,6 +70,7 @@
             background-color: var(--secondary-color);
             overflow-x: hidden;
         }
+
         body {
             display: flex;
             flex-direction: column;
@@ -63,6 +79,7 @@
             padding: 0;
             margin: 0;
         }
+
         .card-container {
             width: 100%;
             max-width: 450px;
@@ -71,13 +88,17 @@
             display: flex;
             flex-direction: column;
         }
+
         .card {
             background: 
+                
         linear-gradient(
             #ffffffCC,  /* Blanco con 80% de opacidad */
             #ffffffCC
         ),
         url('') center/cover no-repeat;
+                
+           
             width: 100%;
             max-width: 100%;
             margin: 0 auto;
@@ -86,6 +107,7 @@
             flex-direction: column;
             min-height: 100vh;
         }
+
         .card-header,
         .card-body,
         .card-footer {
@@ -93,6 +115,7 @@
             padding: 20px;
             box-sizing: border-box;
         }
+
         .card-header {
     background: 
         /* Gradiente con colores HEX + opacidad (usando #RRGGBBAA) */
@@ -111,31 +134,37 @@
     box-sizing: border-box;
     position: relative;
 }
+
         @media (max-width: 600px) {
             body {
                 padding: 0;
                 margin: 0;
             }
+
             .card {
                 border-radius: 0;
                 box-shadow: none;
             }
+
             .card-header,
             .card-body,
             .card-footer {
                 padding: 15px;
             }
         }
+
         @media (min-width: 600px) {
             body {
                 padding: 20px;
                 justify-content: center;
             }
         }
+
         img, iframe, video, svg {
             max-width: 100%;
             height: auto;
         }
+
         .modal-content,
         .custom-modal-content {
             width: 100vw;
@@ -143,10 +172,12 @@
             max-width: 100%;
             border-radius: 0;
         }
+
         .profile-section {
             position: relative;
             margin-bottom: 15px;
         }
+
         .profile-pic {
             width: 100px;
             height: 100px;
@@ -157,16 +188,19 @@
             overflow: hidden;
             box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
         }
+
         .profile-pic img {
             width: 100%;
             height: 100%;
             object-fit: cover;
         }
+
         .profile-actions {
             position: absolute;
             top: 5px;
             right: 10px;
         }
+
         #btn-descargar {
             background: var(--primary-light);
             border: none;
@@ -181,22 +215,26 @@
             transition: var(--transition);
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
         }
+
         #btn-descargar svg {
             width: 18px;
             height: 18px;
             fill: var(--primary-color);
         }
+
         .card-header h1 {
             font-size: 1.4rem;
             margin-bottom: 5px;
             font-weight: 600;
             line-height: 1.2;
         }
+
         .card-header p {
             font-size: 0.9rem;
             opacity: 0.9;
             margin-bottom: 15px;
         }
+
         .badges {
             display: flex;
             justify-content: center;
@@ -204,6 +242,7 @@
             margin-top: 10px;
             flex-wrap: wrap;
         }
+
         .badge {
             padding: 4px 8px;
             border-radius: 20px;
@@ -213,20 +252,24 @@
             align-items: center;
             gap: 4px;
         }
+
         .badge.verified {
             background-color: rgba(76, 209, 55, 0.2);
             color: #4cd137;
         }
+
         .badge.premium {
             background-color: rgba(255, 215, 0, 0.2);
             color: gold;
         }
+
         .social-icons {
             display: flex;
             justify-content: center;
             gap: 12px;
             margin: 15px 0;
         }
+
         .social-icon {
             width: 36px;
             height: 36px;
@@ -240,9 +283,11 @@
             box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
             transition: var(--transition);
         }
+
         .social-icon:hover {
             transform: translateY(-3px);
         }
+
         .qr-corner {
             position: absolute;
             top: 10px;
@@ -254,26 +299,31 @@
             padding: 5px;
             box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
         }
+
         .qr-corner img {
             width: 100%;
             height: 100%;
         }
+
         .card-body {
             padding: 15px;
             flex: 1;
         }
+
         .info-container {
             display: flex;
             flex-wrap: wrap;
             gap: 10px;
             margin-bottom: 15px;
         }
+
         .info-block {
             flex: 1 1 calc(50% - 5px)!important;
             box-sizing: border-box;
             position: relative;
             min-width: calc(50% - 5px)!important;
         }
+
         .label {
             font-size: 11px;
             color: var(--primary-color);
@@ -281,6 +331,7 @@
             text-align: left;
             font-weight: 500;
         }
+
         .value,
         .dni-field {
             background-color: var(--primary-light);
@@ -297,6 +348,7 @@
             overflow: visible;
             margin-bottom: 8px;
         }
+
         .icon-button {
             position: absolute;
             right: 8px;
@@ -317,6 +369,7 @@
             color: var(--primary-color);
             box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
         }
+
         .dni-input-password {
             display: none;
             margin-top: 6px;
@@ -328,10 +381,12 @@
             color: var(--text-color);
             background-color: white;
         }
+
         .dni-text {
             display: block;
             width: 100%;
         }
+
         .card-footer {
             padding: 12px 15px;
             border-top: 1px solid rgba(0, 0, 0, 0.05);
@@ -339,17 +394,20 @@
             flex-direction: column;
             gap: 12px;
         }
+
         .footer-credits {
             text-align: center;
             font-size: 0.75rem;
             color: var(--text-light);
         }
+
         .footer-actions {
             display: flex;
             gap: 8px;
             justify-content: center;
             flex-wrap: wrap;
         }
+
         .action-btn {
             padding: 8px 12px;
             border: none;
@@ -366,11 +424,13 @@
             width: 100%;
             justify-content: center;
         }
+
         .action-btn.secondary {
             background-color: transparent;
             border: 1px solid var(--primary-color);
             color: var(--primary-color);
         }
+
         .modal,
         .custom-modal {
             display: none;
@@ -384,10 +444,12 @@
             align-items: flex-end;
             justify-content: center;
         }
+
         .modal.active,
         .custom-modal.active {
             display: flex;
         }
+
         .modal-content,
         .custom-modal-content {
             width: 100%;
@@ -400,10 +462,12 @@
             position: relative;
             margin: 0 auto;
         }
+
         @keyframes slideUp {
             from { transform: translateY(100%); opacity: 0; }
             to { transform: translateY(0); opacity: 1; }
         }
+
         .modal-close,
         .custom-modal-close {
             position: absolute;
@@ -419,6 +483,7 @@
             cursor: pointer;
             border: none;
         }
+
         .modal-title,
         .custom-modal-title {
             color: var(--primary-color);
@@ -427,6 +492,7 @@
             margin-bottom: 15px;
             text-align: center;
         }
+
         .modal-text {
             color: var(--text-color);
             font-size: 14px;
@@ -434,6 +500,7 @@
             margin-bottom: 20px;
             text-align: center;
         }
+
         .modal-action {
             display: block;
             width: 100%;
@@ -449,6 +516,7 @@
             border: none;
             text-align: center;
         }
+
         .custom-container {
             display: flex;
             flex-wrap: wrap;
@@ -456,12 +524,14 @@
             justify-content: center;
             margin: 15px;
         }
+
         .custom-block {
             flex: 1;
             min-width: calc(50% - 5px)!important;
             max-width: 500px;
             cursor: pointer;
         }
+
         .custom-label {
             font-size: 11px;
             color: var(--primary-color);
@@ -469,6 +539,7 @@
             text-align: left;
             font-weight: 500;
         }
+
         .custom-value {
             background-color: var(--primary-light);
             color: var(--primary-color);
@@ -485,10 +556,12 @@
             justify-content: center;
             gap: 8px;
         }
+
         .custom-button-icon {
             width: 18px;
             height: 18px;
         }
+
         .custom-icon-button {
             position: absolute;
             right: 10px;
@@ -498,6 +571,7 @@
             font-size: 12px;
             color: var(--primary-color);
         }
+
         .custom-map-container,
         .custom-video-container {
             width: 100%;
@@ -506,20 +580,24 @@
             overflow: hidden;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         }
+
         .custom-map-container {
             height: 250px;
         }
+
         .custom-map-container iframe,
         .custom-video-container iframe {
             width: 100%;
             height: 100%;
             border: none;
         }
+
         .custom-video-container {
             position: relative;
             padding-bottom: 56.25%;
             height: 0;
         }
+
         .custom-video-container iframe {
             position: absolute;
             top: 0;
@@ -527,6 +605,7 @@
             width: 100%;
             height: 100%;
         }
+
         .custom-modal-action {
             display: block;
             width: 100%;
@@ -542,64 +621,81 @@
             cursor: pointer;
             border: none;
         }
+
         @media (min-width: 600px) {
             body {
                 justify-content: center;
                 padding: 40px 20px;
             }
+
             .card-container {
                 max-width: 450px;
                 padding: 16px;
                 margin-top: 2200px;
             }
+
             .card {
                 border-radius: var(--border-radius);
                 box-shadow: var(--card-shadow);
             }
+
             .card-header {
                 padding: 25px;
             }
+
             .profile-pic {
                 width: 120px;
                 height: 120px;
             }
+
             .card-header h1 {
                 font-size: 1.8rem;
             }
+
             .value,
             .dni-field {
                 font-size: 14px;
                 padding: 15px;
             }
+
             .social-icon {
                 width: 42px;
                 height: 42px;
                 font-size: 18px;
             }
+
             .qr-corner {
                 width: 60px;
                 height: 60px;
             }
+
             .custom-value {
                 padding: 15px 40px 15px 15px;
                 font-size: 14px;
             }
+
             .custom-button-icon {
                 width: 20px;
                 height: 20px;
             }
+
             .custom-map-container {
                 height: 350px;
             }
+
             .footer-actions {
                 flex-direction: row;
             }
+
             .action-btn {
                 width: auto;
                 flex: 1;
                 max-width: 200px;
             }
         }
+
+
+
 /* Icono dentro del botón */
 .custom-button-icon {
   width: 20px;
@@ -607,6 +703,15 @@
   fill: #003620;
   flex-shrink: 0;
 }
+
+
+
+
+
+
+
+        
+
 /* ESTILOS DEL REVERSO (COPIA ESTO TAL CUAL) */
     #reverso-movil {
       display: none;
@@ -621,10 +726,12 @@
       align-items: center;
       justify-content: center;
     }
+    
     .contenedor-logos {
       display: flex;
       gap: 20px;
     }
+    
     .logo-circular {
       width: 100px;
       height: 100px;
@@ -635,16 +742,19 @@
       justify-content: center;
       overflow: hidden;
     }
+    
     .logo-circular img {
       max-width: 100%;
       max-height: 100%;
     }
+    
     /* DETECCIÓN INFALIBLE DE MÓVIL HORIZONTAL */
     @media only screen and (max-device-width: 1024px) and (orientation: landscape) {
       #reverso-movil {
         display: flex;
       }
     }
+
         .logo-corner {
     position: absolute;
     top: 10px;
@@ -657,12 +767,18 @@
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
     z-index: 2;
 }
+
 .logo-corner img {
     width: 100%;
     height: 100%;
     border-radius: 50%;
     object-fit: cover;
 }
+
+
+
+ 
+
   #dniPasswordField {
     width: 170px;
     padding: 8px 12px;
@@ -671,15 +787,23 @@
     border-radius: 5px;
     box-sizing: border-box;
   }
-</style>
+
+
+        
+        
+    </style>
+
+
+
 <style>
   /* Reset interno para evitar conflictos */
   .gr-container * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-family: -apple-system, BlinkMacSystemFont, &#39;Segoe UI&#39;, Roboto, Oxygen, Ubuntu, Cantarell, &#39;Open Sans&#39;, &#39;Helvetica Neue&#39;, sans-serif;
   }
+  
   .gr-container {
     --gr-primary: #d7e4e1;
     --gr-success: #34a853;
@@ -690,6 +814,7 @@
     --gr-border: #e0e0e0;
     --gr-bg: #fff;
     --gr-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+    
     max-width: 1200px;
     margin: 30px auto;
     color: var(--gr-text);
@@ -698,6 +823,7 @@
     padding: 25px;
     background: var(--gr-bg);
   }
+
   .gr-header {
     display: flex;
     align-items: center;
@@ -706,11 +832,13 @@
     padding-bottom: 15px;
     border-bottom: 1px solid var(--gr-border);
   }
+  
   .gr-header img {
     width: 32px;
     height: 32px;
     object-fit: contain;
   }
+  
   .gr-header h2 {
     font-size: 1.8rem;
     margin: 0;
@@ -720,6 +848,7 @@
     gap: 12px;
     color: var(--gr-text);
   }
+  
   .gr-count {
     font-weight: 700;
     font-size: 1.1rem;
@@ -729,11 +858,13 @@
     border-radius: 20px;
     border: 1px solid var(--gr-border);
   }
+  
   .gr-header-buttons {
     margin-left: auto;
     display: flex;
     gap: 15px;
   }
+  
   .gr-header-btn {
     padding: 8px 18px;
     background: var(--gr-success);
@@ -748,38 +879,20 @@
     gap: 8px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   }
+  
   .gr-header-btn:hover {
     background: #2d9249;
     transform: translateY(-2px);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
   }
+  
   .gr-grid {
-    display: flex;
-    overflow-x: auto;
-    scroll-behavior: smooth;
-    -webkit-overflow-scrolling: touch;
+    display: grid;
     gap: 20px;
-    padding: 10px 0;
-    margin: 0 -25px;
-    padding: 0 25px;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
   }
-  /* Barra de desplazamiento personalizada */
-  .gr-grid::-webkit-scrollbar {
-    height: 6px;
-  }
-  .gr-grid::-webkit-scrollbar-track {
-    background: #f1f1f1;
-    border-radius: 3px;
-  }
-  .gr-grid::-webkit-scrollbar-thumb {
-    background: #c1c1c1;
-    border-radius: 3px;
-  }
-  .gr-grid::-webkit-scrollbar-thumb:hover {
-    background: #a8a8a8;
-  }
+  
   .gr-card {
-    min-width: 280px;
     border: 1px solid var(--gr-border);
     border-radius: 10px;
     padding: 18px 20px;
@@ -789,24 +902,27 @@
     justify-content: space-between;
     transition: all 0.3s ease;
     box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
-    flex: 0 0 auto;
   }
+  
   .gr-card:hover {
     transform: translateY(-5px);
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
     border-color: #d2e3fc;
   }
+  
   .gr-card-header {
     display: flex;
     align-items: center;
     justify-content: space-between;
     margin-bottom: 12px;
   }
+  
   .gr-user-info {
     display: flex;
     align-items: center;
     gap: 10px;
   }
+  
   .gr-avatar {
     width: 36px;
     height: 36px;
@@ -819,22 +935,26 @@
     font-weight: bold;
     font-size: 16px;
   }
+  
   .gr-username {
     font-weight: 700;
     font-size: 1.05rem;
     color: var(--gr-text);
   }
+  
   .gr-date {
     font-size: 0.75rem;
     color: var(--gr-text-light);
     margin-top: 2px;
   }
+  
   .gr-rating {
     color: var(--gr-warning);
     font-weight: 700;
     font-size: 1rem;
     white-space: nowrap;
   }
+  
   .gr-text {
     font-size: 0.95rem;
     line-height: 1.5;
@@ -842,9 +962,11 @@
     margin: 12px 0 18px;
     flex-grow: 1;
   }
+  
   .gr-btn-container {
     text-align: right;
   }
+  
   .gr-btn {
     padding: 6px 12px;
     font-size: 0.85rem;
@@ -858,16 +980,19 @@
     align-items: center;
     gap: 5px;
   }
+  
   .gr-btn:hover {
     background: #e0004d;
     transform: translateY(-1px);
   }
+  
   .gr-view-all {
     margin-top: 30px;
     text-align: center;
     padding-top: 20px;
     border-top: 1px solid var(--gr-border);
   }
+  
   .gr-view-all-btn {
     padding: 10px 24px;
     font-size: 1rem;
@@ -882,50 +1007,63 @@
     gap: 8px;
     box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
   }
+  
   .gr-view-all-btn:hover {
     background: #d33426;
     transform: translateY(-2px);
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
   }
+  
   .gr-stars {
     color: var(--gr-warning);
     letter-spacing: 2px;
     font-size: 1.1em;
   }
+  
   /* Animaciones */
   @keyframes gr-fadeIn {
     from { opacity: 0; transform: translateY(10px); }
     to { opacity: 1; transform: translateY(0); }
   }
+  
   .gr-card {
     animation: gr-fadeIn 0.4s ease forwards;
     opacity: 0;
   }
+  
   .gr-card:nth-child(1) { animation-delay: 0.1s; }
   .gr-card:nth-child(2) { animation-delay: 0.2s; }
   .gr-card:nth-child(3) { animation-delay: 0.3s; }
   .gr-card:nth-child(4) { animation-delay: 0.4s; }
+  
   /* Responsive */
   @media (max-width: 768px) {
     .gr-header {
       flex-wrap: wrap;
     }
+    
     .gr-header-buttons {
       margin-left: 0;
       width: 100%;
       justify-content: flex-end;
     }
+    
     .gr-grid {
       grid-template-columns: 1fr;
     }
   }
 </style>
+
+
+
+
 <style>
 .contenedor-boton {
     display: inline-block;
     position: relative;
     margin: 10px;
 }
+
 .boton-resena {
     display: inline-flex;
     align-items: center;
@@ -944,6 +1082,7 @@
     transition: all 0.3s ease;
     cursor: pointer;
 }
+
 /* EFECTO ONDA QUE SÍ SE VE (pero sin exagerar) */
 .efecto-onda {
     position: absolute;
@@ -956,17 +1095,27 @@
     z-index: 0;
     animation: onda 2.5s infinite ease-out;
 }
+
+
+
 .boton-resena:hover {
     transform: translateY(-2px);
     box-shadow: 0 4px 10px rgba(0,0,0,0.15);
     border-color: #d2e3fc;
 }
+
 .boton-resena img {
     width: 18px;
     height: 18px;
     margin-right: 8px;
 }
 </style>
+    
+
+
+
+
+
 <style>
     body, html {
       overflow-x: hidden;
@@ -974,6 +1123,7 @@
       padding: 0;
       font-family: system-ui, sans-serif;
     }
+
     /* Carrusel scroll horizontal */
     .carrusel {
       overflow-x: auto;
@@ -982,6 +1132,7 @@
       padding-bottom: 0.5rem;
       -webkit-overflow-scrolling: touch;
     }
+
     .producto {
       display: inline-block;
       vertical-align: top;
@@ -994,9 +1145,11 @@
       cursor: pointer;
       transition: transform 0.2s;
     }
+
     .producto:hover {
       transform: scale(1.05);
     }
+
     .modal-content {
       max-height: 85vh;
       overflow-y: auto;
@@ -1009,9 +1162,11 @@
       margin: 0 auto;
       position: relative;
     }
+
     body.modal-opened {
       overflow: hidden;
     }
+
     .btn-close {
       position: absolute;
       top: 1rem;
@@ -1024,9 +1179,11 @@
       cursor: pointer;
       transition: color 0.2s;
     }
+
     .btn-close:hover {
       color: #000;
     }
+
     .modal-image {
       width: auto;
       max-height: 250px;
@@ -1035,6 +1192,7 @@
       object-fit: contain;
       border-radius: 1rem;
     }
+
     .btn-store {
       display: block;
       text-align: center;
@@ -1047,12 +1205,61 @@
       margin-top: 1rem;
       transition: background-color 0.2s;
     }
+
     .btn-store:hover {
       background-color: #1e40af;
     }
   </style>
+
+
+    
 </head>
 <body>
+
+
+
+
+
+
+
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
 <div class="card-container">
     <div class="card" id="capture-area">
         <div class="card-header">
@@ -1062,6 +1269,8 @@
 <div class="logo-corner">
   <img src=" https://destinoanimal.es/wp-content/uploads/2025/06/cropped-favicon-1-192x192.png" alt="Logo">
 </div>
+
+            
             <div class="profile-section">
                 <div class="profile-pic">
                     <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhfsK_IX7HmU7FUU17nzLMbq9KEl07Gpxrxkm7P4RrZE6wZGDDF4XdPTxSsdW6zPLQVKx9HIY4McB0bng3rjM-x6ZbaJ2havZPztkFFdCaav6AsKyhd15MJ76apnBuAu-11ToRKh469fKuhI1FyG55eSGPXVQXPC8SVLG2xY4pSMW2Rpw5GFuD_i0CaPuI/s1600/5fdc75bc-7167-43cd-81c2-0889ecb47f95.jpg" alt="Foto de perfil" id="profile-img">
@@ -1079,6 +1288,7 @@
                 <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
                 <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
             </div>
+
 <br/>
 <a href="https://g.page/r/CVbJmvjvAXNpEBM/review" 
        target="_blank"
@@ -1086,14 +1296,30 @@
        <img src="https://img.icons8.com/color/24/google-logo.png" alt="Google">
        DEJE SU RESEÑA
     </a>
+   
+
+            
         </div>
+
+
+
+
+
+
+
+
+
+
 <div class='gr-container'>
   <div class='gr-header'>
     <img alt='Google logo' src='https://cdn-icons-png.flaticon.com/512/2504/2504739.png'/>  <img alt='' border='0' data-original-height='62' data-original-width='62' src='https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgbj1DwGk9EKrgrC9pk7Gkmn5TEyetDnilOKaVFDsCut1AjLLFmANktD3mP73K1f9gXZiMcQLLTOuNEq-qQXR1Yz1BOHHzxdKi3zNKvJsA2-jxpt7wcnuGsRG_8Gz3Nv3sllxNXesm6BrTcesHotDzNPYR8U5BtboAktU9v1K3c0Q6fTGMcdLt3UdEXi6k/s1600/Dise%C3%B1o%20sin%20t%C3%ADtulo%20%2850%29.png'/>
     <h3>
+      
       <span class='gr-count'>5,0 <span class='gr-stars'>&#9733;&#9733;&#9733;&#9733;&#9733;</span> (20)</span>
     </h3>
+    
   </div>
+
   <div class='gr-grid'>
     <!-- Review 1 -->
     <div class='gr-card'>
@@ -1120,6 +1346,7 @@ super atentos, t resuelven todas las dudas q tengas.</div>
         </a>
       </div>
     </div>
+
     <!-- Review 2 -->
     <div class='gr-card'>
       <div class='gr-card-header'>
@@ -1144,6 +1371,7 @@ super atentos, t resuelven todas las dudas q tengas.</div>
         </a>
       </div>
     </div>
+
     <!-- Review 3 -->
     <div class='gr-card'>
       <div class='gr-card-header'>
@@ -1168,6 +1396,7 @@ super atentos, t resuelven todas las dudas q tengas.</div>
         </a>
       </div>
     </div>
+
     <!-- Review 4 -->
     <div class='gr-card'>
       <div class='gr-card-header'>
@@ -1193,7 +1422,45 @@ super atentos, t resuelven todas las dudas q tengas.</div>
       </div>
     </div>
   </div>
+
 </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
         <div class="card-body">
             <div class="info-container">
                 <div class="info-block">
@@ -1210,6 +1477,7 @@ super atentos, t resuelven todas las dudas q tengas.</div>
                         <span class="icon-button" onclick="event.stopPropagation(); openModal('federal')">i</span>
                     </div>
                 </div>
+
 <div class="info-block">
                     <div class="label">Nº C. NACIONAL</div>
                     <div class="value" onclick="openModal('criador')" style="cursor: pointer; position: relative;">
@@ -1224,19 +1492,33 @@ super atentos, t resuelven todas las dudas q tengas.</div>
                         <span class="icon-button" onclick="event.stopPropagation(); openModal('federal')">i</span>
                     </div>
                 </div>
+
+
+  
+
+
+
+
+                
                 <div class="info-block">
   <div class="info-block">
                     <div class="label">DNI / NIE</div>
                     <div id="dniField" class="dni-field" onclick="showPasswordInput(this)" style="cursor: pointer; position: relative;">
                         <span id="dniText" class="dni-text">XXXXXXXX</span>
+                        
 <input type="password" id="dniPasswordField" onkeydown="handlePassword(event)" placeholder="Introduce contraseña" />
 <p id="dniText"></p>
+
+
                       </div> 
+                    
+
                 <div class="info-block">
                     <div class="label">FECHA VENCIMIENTO</div>
                     <div class="dni-field" onclick="openModal('fecha')" style="cursor: pointer; position: relative;">
                         <span class="dni-text">12/12/2026</span>
                         <span class="icon-button" onclick="event.stopPropagation(); openModal('fecha')">i</span>
+                    
                 </div>
             </div>
             <div class="info-container">
@@ -1268,7 +1550,7 @@ super atentos, t resuelven todas las dudas q tengas.</div>
       <div class="label">SÍGUEME EN</div>
       <div class="value">
         <svg class="custom-button-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#003620">
-          <path d="M18 11v2h4v-2h-4zm-2 6.61c.96.71 2.21 1.65 3.2 2.39.4-.53.8-1.07 1.2-1.6-.99-.74-2.24-1.68-3.2-2.4-.4.53-.8 1.08-1.2 1.61zM20.4 5.6c-.4-.53-.8-1.07-1.2-1.6-.99.74-2.24 1.68-3.2 2.4.4.53.8 1.07 1.2 1.6.96-.72 2.21-1.65 3.2-2.4z"/>
+          <path d="M18 11v2h4v-2h-4zm-2 6.61c.96.71 2.21 1.65 3.2 2.39.4-.53.8-1.07 1.2-1.6-.99-.74-2.24-1.68-3.2-2.4-.4.54-.8 1.08-1.2 1.61zM20.4 5.6c-.4-.53-.8-1.07-1.2-1.6-.99.74-2.24 1.68-3.2 2.4.4.53.8 1.07 1.2 1.6.96-.72 2.21-1.65 3.2-2.4z"/>
           <path d="M4 9c-1.1 0-2 .9-2 2v2c0 1.1.9 2 2 2h1v4h2v-4h1l5 3V6L8 9H4z"/>
         </svg>
         Avianuncios.com
@@ -1276,6 +1558,8 @@ super atentos, t resuelven todas las dudas q tengas.</div>
       </div>
     </div>
   </div>
+
+
 <div class="info-block">
   <div class="info-block">
     <div class="block" onclick="openCustomModal('whatsapp')">
@@ -1291,8 +1575,19 @@ super atentos, t resuelven todas las dudas q tengas.</div>
     </div>
   </div>
 </div>
+
+
+
+
+
+
+
+
+      
 <body x-data="productModal()" class="bg-gray-100 p-0 m-0">
+
   <h3 class="text-2xl font-bold mb-4">Mejores ofertas</h3>
+
   <div class="carrusel" aria-label="Carrusel de productos" role="list">
     <template x-for="product in products" :key="product.id">
       <div
@@ -1316,6 +1611,7 @@ super atentos, t resuelven todas las dudas q tengas.</div>
       </div>
     </template>
   </div>
+
   <!-- Modal -->
   <div
     x-show="isOpen"
@@ -1347,6 +1643,7 @@ super atentos, t resuelven todas las dudas q tengas.</div>
         class="btn-close"
         title="Cerrar"
       >&times;</button>
+
       <h2 class="text-xl font-bold mb-3 text-center" x-text="selected.name"></h2>
       <img :src="selected.image" :alt="selected.name" class="modal-image" />
       <p class="text-gray-700 mb-2" x-text="selected.fullDesc"></p>
@@ -1360,6 +1657,7 @@ super atentos, t resuelven todas las dudas q tengas.</div>
       ></a>
     </div>
   </div>
+
   <script>
     function productModal() {
       return {
@@ -1469,11 +1767,30 @@ super atentos, t resuelven todas las dudas q tengas.</div>
       };
     }
   </script>
+
+            
+
+
+
+
+
+
+      
+
+
+            
             <div class="card-footer">
                 <div class="footer-credits">
                     <p>Carnet digital emitido por <strong>SOCNAS</strong></p>
                 </div>
+            
+
+
+
   </div>
+
+
+
  <!-- Banner de instalación PWA -->
     <div id="pwa-install-container">
         <!-- Firefox -->
@@ -1483,6 +1800,7 @@ super atentos, t resuelven todas las dudas q tengas.</div>
                 <strong style="color: #0060df;">Firefox:</strong> Toca <i class="fas fa-ellipsis-v" style="color: #555; margin: 0 4px;"></i> → <strong>"Añadir app a pantalla de inicio"</strong>
             </p>
         </div>
+
         <!-- Safari iOS -->
         <div id="ios-instructions" class="browser-instruction" style="display: none;">
             <i class="fab fa-apple" style="font-size: 22px; color: #555;"></i>
@@ -1490,6 +1808,7 @@ super atentos, t resuelven todas las dudas q tengas.</div>
                 <strong style="color: #007aff;">iPhone/iPad:</strong> Toca <i class="fas fa-share-square" style="color: #007aff; margin: 0 4px;"></i> → <strong>"Añadir a inicio"</strong>
             </p>
         </div>
+
         <!-- Samsung -->
         <div id="samsung-instructions" class="browser-instruction" style="display: none;">
             <i class="fas fa-mobile-alt" style="font-size: 22px; color: #1428a0;"></i>
@@ -1497,6 +1816,7 @@ super atentos, t resuelven todas las dudas q tengas.</div>
                 <strong style="color: #1428a0;">Samsung:</strong> Toca <i class="fas fa-ellipsis-v" style="color: #555; margin: 0 4px;"></i> → <strong>"Añadir página a"</strong> → <strong>"Pantalla de inicio"</strong>
             </p>
         </div>
+
         <!-- Opera -->
         <div id="opera-instructions" class="browser-instruction" style="display: none;">
             <i class="fab fa-opera" style="font-size: 22px; color: #ff1b2d;"></i>
@@ -1505,6 +1825,30 @@ super atentos, t resuelven todas las dudas q tengas.</div>
             </p>
         </div>
     </div>
+
+
+
+
+
+
+
+
+
+
+            
+
+
+
+
+
+
+
+
+
+
+
+
+                
                 <div class="footer-actions">
                     <button class="action-btn secondary" onclick="openModal('info')">
                         <i class="fas fa-info-circle"></i> ASOCIACIÓN ORNITOLÓGICA SOCNAS
@@ -1512,11 +1856,17 @@ super atentos, t resuelven todas las dudas q tengas.</div>
                     <button class="action-btn" onclick="window.open('https://wa.me/34677163664', '_blank')">
   <i class="fas fa-comments"></i> Centro de Soporte
 </button>
+
+
+
+
+                    
                 </div>
             </div>
         </div>
     </div>
 </div>
+
 <!-- Modales -->
 <div class="modal" id="criadorModal">
     <div class="modal-content">
@@ -1526,6 +1876,7 @@ super atentos, t resuelven todas las dudas q tengas.</div>
         <button class="modal-action" onclick="closeModal()">C.N: 56G88</button>
     </div>
 </div>
+
 <div class="modal" id="federalModal">
     <div class="modal-content">
         <button class="modal-close" onclick="closeModal()">×</button>
@@ -1534,6 +1885,7 @@ super atentos, t resuelven todas las dudas q tengas.</div>
         <button class="modal-action" onclick="closeModal()">E8.0595</button>
     </div>
 </div>
+
 <div class="modal" id="fechaModal">
     <div class="modal-content">
         <button class="modal-close" onclick="closeModal()">×</button>
@@ -1542,6 +1894,7 @@ super atentos, t resuelven todas las dudas q tengas.</div>
         <button class="modal-action" onclick="closeModal()">ACTUALIZAR DATOS</button>
     </div>
 </div>
+
 <div class="modal" id="infoModal">
     <div class="modal-content">
         <button class="modal-close" onclick="closeModal()">×</button>
@@ -1550,6 +1903,7 @@ super atentos, t resuelven todas las dudas q tengas.</div>
         <button class="modal-action" onclick="closeModal()">ENTENDIDO</button>
     </div>
 </div>
+
 <div id="custom-map1Modal" class="custom-modal">
     <div class="custom-modal-content">
         <button class="custom-modal-close" onclick="closeCustomModal()">×</button>
@@ -1562,6 +1916,7 @@ super atentos, t resuelven todas las dudas q tengas.</div>
         </div>
     </div>
 </div>
+
 <div id="custom-video1Modal" class="custom-modal">
     <div class="custom-modal-content">
         <button class="custom-modal-close" onclick="closeCustomModal()">×</button>
@@ -1574,6 +1929,7 @@ super atentos, t resuelven todas las dudas q tengas.</div>
         </div>
     </div>
 </div>
+
 <!-- Modal del nuevo botón -->
 <div id="custom-map2Modal" class="custom-modal">
     <div class="custom-modal-content">
@@ -1595,6 +1951,14 @@ super atentos, t resuelven todas las dudas q tengas.</div>
         </div>
     </div>
 </div>
+
+
+
+
+
+
+
+
 <div id="custom-whatsappModal" class="custom-modal">
   <div class="custom-modal-content">
     <button class="custom-modal-close" onclick="closeCustomModal()">×</button>
@@ -1619,6 +1983,16 @@ super atentos, t resuelven todas las dudas q tengas.</div>
     </div>
   </div>
 </div>
+
+
+
+
+
+
+
+
+            
+
 <style>
     #pwaTip {
         position: fixed;
@@ -1634,6 +2008,7 @@ super atentos, t resuelven todas las dudas q tengas.</div>
         border-top: 1px solid #eee;
         animation: slideUp 0.20s ease-out;
     }
+
     .pwa-banner {
         display: flex;
         align-items: center;
@@ -1642,6 +2017,7 @@ super atentos, t resuelven todas las dudas q tengas.</div>
         margin: 0 auto;
         position: relative;
     }
+
     .pwa-content {
         display: flex;
         align-items: center;
@@ -1649,6 +2025,7 @@ super atentos, t resuelven todas las dudas q tengas.</div>
         flex-grow: 1;
         justify-content: flex-start;
     }
+
     .pwa-icon {
         width: 40px;
         height: 40px;
@@ -1659,12 +2036,14 @@ super atentos, t resuelven todas las dudas q tengas.</div>
         border-radius: 8px;
         padding: 4px;
     }
+
     .tip-text {
         color: #000;
         font-size: 14px;
         line-height: 1.3;
         flex-grow: 1;
     }
+
     #installBtn {
         background: #74915b;
         color: #fff;
@@ -1681,6 +2060,7 @@ super atentos, t resuelven todas las dudas q tengas.</div>
         flex-shrink: 0;
         min-width: 140px;
     }
+
     .close-btn {
         position: absolute;
         top: -55px;
@@ -1700,11 +2080,13 @@ super atentos, t resuelven todas las dudas q tengas.</div>
         box-shadow: 0 3px 6px rgba(0, 0, 0, 0.15);
         z-index: 1000;
     }
+
     .close-btn:hover {
         color: #f44336;
         border-color: #f44336;
         transform: rotate(90deg) scale(1.2);
     }
+
     @keyframes slideUp {
         from {
             transform: translateY(100%);
@@ -1713,28 +2095,34 @@ super atentos, t resuelven todas las dudas q tengas.</div>
             transform: translateY(0);
         }
     }
+
     @media (max-width: 480px) {
         .pwa-content {
             gap: 8px;
         }
+
         .tip-text {
             font-size: 13px;
         }
+
         #installBtn {
             padding: 8px 15px;
             font-size: 13px;
             min-width: 120px;
         }
+
         .pwa-icon {
             width: 46px;
             height: 46px;
         }
+
         .close-btn {
             top: -25px;
             right: 15px;
         }
     }
 </style>
+
 <div id="pwaTip">
     <div class="pwa-banner">
         <div class="pwa-content">
@@ -1748,6 +2136,7 @@ super atentos, t resuelven todas las dudas q tengas.</div>
         <button class="close-btn" id="closeTip">&#215;</button>
     </div>
 </div>
+
 <script>
     let deferredPrompt;
     window.addEventListener('beforeinstallprompt', (e) => {
@@ -1755,6 +2144,7 @@ super atentos, t resuelven todas las dudas q tengas.</div>
         deferredPrompt = e;
         document.getElementById('pwaTip').style.display = 'block';
     });
+
     document.getElementById('installBtn').addEventListener('click', () => {
         if (deferredPrompt) {
             deferredPrompt.prompt();
@@ -1766,18 +2156,25 @@ super atentos, t resuelven todas las dudas q tengas.</div>
             });
         }
     });
+
     document.getElementById('closeTip').addEventListener('click', () => {
         document.getElementById('pwaTip').style.display = 'none';
     });
+
     window.addEventListener('appinstalled', () => {
         document.getElementById('pwaTip').style.display = 'none';
     });
+
     if ('serviceWorker' in navigator) {
         navigator.serviceWorker.register('/sw.js')
             .then(reg => console.log('✅ SW registrado'))
             .catch(err => console.error('❌ Error SW:', err));
     }
 </script>
+
+
+
+
 <!-- REVERSO (SOLO PARA MÓVILES) -->
 <div id="reverso-movil" style="background: #1a3a32; min-height: 100vh; display: flex; flex-direction: column; justify-content: center; align-items: center;">
   <div class="contenedor-logos" style="display: flex; flex-wrap: wrap; justify-content: center; gap: 25px; padding: 20px;">
@@ -1802,6 +2199,7 @@ super atentos, t resuelven todas las dudas q tengas.</div>
       </div>
       <div class="logo-texto" style="color: white; font-size: 13px; margin-top: 10px; font-weight: 500; text-align: center;">C.O.E</div>
     </div>
+    
     <!-- LOGO 2 - SOCNAS -->
     <div class="logo-item" style="display: flex; flex-direction: column; align-items: center;">
       <div class="logo-circular" style="
@@ -1823,6 +2221,7 @@ super atentos, t resuelven todas las dudas q tengas.</div>
       </div>
       <div class="logo-texto" style="color: white; font-size: 13px; margin-top: 10px; font-weight: 500; text-align: center;">SOCNAS</div>
     </div>
+    
     <!-- LOGO 3 - F.O.A -->
     <div class="logo-item" style="display: flex; flex-direction: column; align-items: center;">
       <div class="logo-circular" style="
@@ -1844,6 +2243,9 @@ super atentos, t resuelven todas las dudas q tengas.</div>
       </div>
       <div class="logo-texto" style="color: white; font-size: 13px; margin-top: 10px; font-weight: 500; text-align: center;">F.O.A</div>
     </div>
+
+    
+  
   <!-- FOOTER VERDE MEJORADO -->
   <div class="footer" style="
     position: fixed;
@@ -1874,16 +2276,40 @@ super atentos, t resuelven todas las dudas q tengas.</div>
       const esMovil = window.innerWidth <= 1024;
       const esHorizontal = window.innerWidth > window.innerHeight;
       const reverso = document.getElementById('reverso-movil');
+      
       if (esMovil && esHorizontal) {
         reverso.style.display = 'flex';
       } else {
         reverso.style.display = 'none';
       }
     }
+    
     window.addEventListener('load', actualizarReverso);
     window.addEventListener('resize', actualizarReverso);
     window.addEventListener('orientationchange', actualizarReverso);
   </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 <!-- Script de detección -->
     <script>
         // Detectar si ya está instalada
@@ -1893,11 +2319,13 @@ super atentos, t resuelven todas las dudas q tengas.</div>
                 window.navigator.standalone === true
             );
         }
+
         // Mostrar instrucciones según navegador
         document.addEventListener('DOMContentLoaded', () => {
             if (!isInStandaloneMode()) {
                 const container = document.getElementById('pwa-install-container');
                 const ua = navigator.userAgent;
+
                 if (container) {
                     // iOS Safari
                     if (/iPad|iPhone|iPod/.test(ua) || (ua.includes('Mac') && 'ontouchend' in document)) {
@@ -1922,16 +2350,23 @@ super atentos, t resuelven todas las dudas q tengas.</div>
                 }
             }
         });
+
         // Ocultar banner tras instalación
         window.addEventListener('appinstalled', () => {
             const container = document.getElementById('pwa-install-container');
             if (container) container.style.display = 'none';
         });
     </script>
+
+
+
+
+
 <script>
   function handlePassword(e) {
     if (e.key === 'Enter') {
       const pwd = e.target.value;
+
       fetch('/api/checkPassword', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
@@ -1949,39 +2384,60 @@ super atentos, t resuelven todas las dudas q tengas.</div>
     }
   }
 </script>
+
+
+
+
 <script>
     function openModal(modalType) {
         closeModal();
         document.getElementById(modalType + 'Modal').classList.add('active');
         document.body.style.overflow = 'hidden';
     }
+
     function closeModal() {
         document.querySelectorAll('.modal').forEach(m => m.classList.remove('active'));
         document.body.style.overflow = '';
     }
+
     function openCustomModal(id) {
         closeCustomModal();
         document.getElementById('custom-' + id + 'Modal').classList.add('active');
         document.body.style.overflow = 'hidden';
     }
+
     function closeCustomModal() {
         document.querySelectorAll('.custom-modal').forEach(m => m.classList.remove('active'));
         document.body.style.overflow = '';
     }
+
+   
+
+    
+
+    
 </script>
+
+
+    
+    
+    
+
+
+
 <script>
   function sendWhatsAppMessage(event) {
     event.preventDefault();
     const name = document.getElementById('name').value.trim();
     const message = document.getElementById('message').value.trim();
+
     const fullMessage = `Hola, soy ${name}. ${message}`;
     const phoneNumber = "521XXXXXXXXXX"; // reemplaza con tu número, formato internacional sin '+'
+
     const whatsappURL = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(fullMessage)}`;
     window.open(whatsappURL, '_blank');
+
     closeCustomModal(); // Cierra el modal después de abrir WhatsApp
     return false;
   }
-</script>
-
-<body/>
-<html/>
+</script> 
